@@ -3,7 +3,10 @@ import Image from "next/image"
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-center p-24">
-      hellu
+      <div className="flex flex-col gap-2">
+        <h5 className="text-base">👋 hellu there</h5>
+        <h1 className="text-8xl font-bold">It&apos;s Dewansh</h1>
+      </div>
     </main>
   )
 }
