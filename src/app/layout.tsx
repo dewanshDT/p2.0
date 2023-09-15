@@ -1,6 +1,8 @@
+import { Layout } from "@/components"
 import "./globals.css"
 import type { Metadata } from "next"
 import { Source_Code_Pro } from "next/font/google"
+import clsx from "clsx"
 
 const sourceCodePro = Source_Code_Pro({
   weight: ["200", "300", "400", "500", "600", "700", "800", "900"],
@@ -20,7 +22,15 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={sourceCodePro.className}>{children}</body>
+      <body
+        className={clsx(
+          sourceCodePro.className,
+          sourceCodePro.variable,
+          "dark:bg-black bg-white dark:text-white",
+        )}
+      >
+        <Layout>{children}</Layout>
+      </body>
     </html>
   )
 }
