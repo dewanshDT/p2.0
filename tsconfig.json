@@ -19,7 +19,8 @@
       }
     ],
     "paths": {
-      "@/*": ["./src/*"]
+      "@/*": ["./src/*"],
+      "contentlayer/generated": ["./.contentlayer/generated"]
     }
   },
   "include": [
@@ -27,7 +28,8 @@
     "**/*.ts",
     "**/*.tsx",
     "**/**/*.tsx",
-    ".next/types/**/*.ts"
+    ".next/types/**/*.ts",
+    "contentlayer.config.js"
   ],
   "exclude": ["node_modules"]
 }
