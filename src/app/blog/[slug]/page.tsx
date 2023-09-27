@@ -4,12 +4,7 @@ import React, { useMemo } from "react"
 import { allBlogPosts } from "contentlayer/generated"
 import { notFound } from "next/navigation"
 import { Mdx } from "@/components"
-
-export async function generateStaticParams() {
-  return allBlogPosts.map((doc) => ({
-    slug: doc.slugAsParams,
-  }))
-}
+import { Metadata } from "next"
 
 interface Props {
   params: {
@@ -23,6 +18,38 @@ function getBlogFromSlug(slug: string) {
   if (!blog) notFound()
 
   return blog
+}
+export async function generateStaticParams() {
+  return allBlogPosts.map((doc) => ({
+    slug: doc.slugAsParams,
+  }))
+}
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const doc = getBlogFromSlug(params.slug)
+
+  if (!doc) {
+    return {}
+  }
+
+  const url = process.env.NEXT_PUBLIC_APP_URL || "http://localhost:3000"
+  return {
+    title: doc.title,
+    description: doc.description,
+    openGraph: {
+      title: doc.title,
+      description: doc.description,
+      type: "article",
+      url: `${url}${doc.slug}`,
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: doc.title,
+      site: AUTHOR_TWITTER_HANDLE,
+      creator: AUTHOR_TWITTER_HANDLE,
+      description: doc.description,
+    },
+  }
 }
 
 const Page: React.FC<Props> = ({ params }) => {
