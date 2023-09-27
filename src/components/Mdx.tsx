@@ -19,7 +19,7 @@ const components = {
       {...props}
       className={twMerge(
         props.className,
-        "mt-14 mb-4 scroll-m-20 pb-2 text-3xl font-semibold tracking-tight first:mt-0",
+        "mt-14 mb-4 scroll-m-20 text-3xl font-semibold tracking-tight first:mt-0",
       )}
     />
   ),
@@ -71,7 +71,7 @@ const components = {
   p: (props: any) => (
     <p
       className={twMerge(
-        "leading-7 text-base mb-4 [&:not(:first-child)]:mt-6",
+        "text-base mb-4 leading-loose [&:not(:first-child)]:mt-6",
         props.className,
       )}
       {...props}
@@ -91,7 +91,10 @@ const components = {
   ),
   li: (props: any) => (
     <li
-      className={twMerge("my-2 marker:text-neutral-400", props.className)}
+      className={twMerge(
+        "my-2 leading-loose marker:text-neutral-400",
+        props.className,
+      )}
       {...props}
     />
   ),
@@ -122,7 +125,7 @@ const components = {
   td: (props: any) => (
     <td
       className={twMerge(
-        "border-t text-sm dark:border-neutral-900 border-neutral-100 pr-4 py-2 text-left [&[align=center]]:text-center [&[align=right]]:text-right",
+        "border-t text-sm leading-relaxed dark:border-neutral-900 border-neutral-100 pr-4 py-2 text-left [&[align=center]]:text-center [&[align=right]]:text-right",
         props.className,
       )}
       {...props}
@@ -140,7 +143,7 @@ const components = {
   code: (props: any) => (
     <code
       className={clsx(
-        "relative rounded font-primary dark:bg-neutral-800 bg-neutral-200 im px-[0.3rem] py-[0.12rem] text-sm",
+        "relative rounded font-mono font-medium dark:bg-neutral-800 bg-neutral-200 im px-[0.3rem] py-[0.12rem] text-sm",
         props.className,
       )}
       {...props}

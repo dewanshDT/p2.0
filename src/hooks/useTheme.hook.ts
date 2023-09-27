@@ -1,9 +1,11 @@
 "use client"
 import React, { useEffect, useState } from "react"
 
+type Theme = "dark" | "light"
+
 export default function useTheme() {
   const [isMounted, setIsMounted] = useState(false)
-  const [theme, setTheme] = useState<"light" | "dark">("light")
+  const [theme, setTheme] = useState<"light" | "dark">("dark")
 
   useEffect(() => {
     setIsMounted(true)
@@ -14,7 +16,9 @@ export default function useTheme() {
       return
     }
 
-    setTheme(localStorage?.theme || "light")
+    const localTheme: Theme = (localStorage.getItem("theme") as Theme) ?? "dark"
+
+    setTheme(localTheme)
   }, [isMounted])
 
   useEffect(() => {

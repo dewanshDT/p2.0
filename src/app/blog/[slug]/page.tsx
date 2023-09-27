@@ -1,10 +1,13 @@
-import { AUTHOR_TWITTER_HANDLE } from "@/lib/constants"
-import Head from "next/head"
-import React, { useMemo } from "react"
-import { allBlogPosts } from "contentlayer/generated"
-import { notFound } from "next/navigation"
-import { Mdx } from "@/components"
+import React from "react"
 import { Metadata } from "next"
+import { notFound } from "next/navigation"
+import { allBlogPosts } from "contentlayer/generated"
+
+import { AUTHOR_TWITTER_HANDLE } from "@/lib/constants"
+import { Mdx } from "@/components"
+import { table } from "console"
+import { formatDate } from "@/lib/utils"
+import Image from "next/image"
 
 interface Props {
   params: {
@@ -55,32 +58,47 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 const Page: React.FC<Props> = ({ params }) => {
   const { slug } = params
 
-  const { title, description, body, tags } = getBlogFromSlug(slug)
+  const { title, description, body, tags, published, banner } =
+    getBlogFromSlug(slug)
 
   return (
-    <>
-      <Head>
-        <title>{title}</title>
-        <meta name="description" content={description} />
-
-        <meta property="og:title" content={title} />
-        <meta property="og:description" content={description} />
-        <meta property="og:type" content="article" />
-        <meta
-          property="og:url"
-          content={`https://dewansh.space/blog/${slug}`}
-        />
-
-        <meta name="twitter:card" content="summary" />
-        <meta name="twitter:site" content={AUTHOR_TWITTER_HANDLE} />
-        <meta name="twitter:creator" content={AUTHOR_TWITTER_HANDLE} />
-        <meta name="twitter:title" content={title} />
-        <meta name="twitter:description" content={description} />
-      </Head>
-      <div className="max-w-3xl mx-6 dark:text-neutral-300 text-neutral-700">
+    <div className="max-w-6xl flex flex-col mx-6 pt-10 w-full">
+      <div className="max-w-3xl dark:text-neutral-300 text-neutral-800">
+        <div className="flex my-6 flex-col">
+          <h1 className="sm:text-4xl text-3xl text-neutral-900 dark:text-neutral-100 font-bold mb-4">
+            {title}
+          </h1>
+          <h2 className="text-2xl text-neutral-500 dark:text-neutral-500 font-semibold">
+            {description}
+          </h2>
+          <div className="text-neutral-600 dark:text-neutral-400 my-2 font-semibold">
+            {formatDate(published)}
+          </div>
+          {tags && (
+            <div className="flex gap-3 my-4 flex-wrap">
+              {tags.map((tag) => (
+                <div
+                  key={tag}
+                  className="rounded dark:bg-neutral-800 bg-neutral-200 im px-[0.3rem] py-[0.12rem] text-sm"
+                >
+                  {tag}
+                </div>
+              ))}
+            </div>
+          )}
+        </div>
+        {banner && (
+          <Image
+            width={800}
+            height={600}
+            className="my-6"
+            src={banner}
+            alt="banner"
+          />
+        )}
         <Mdx code={body.code} />
       </div>
-    </>
+    </div>
   )
 }
 
