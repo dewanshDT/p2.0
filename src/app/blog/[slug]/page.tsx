@@ -29,7 +29,6 @@ const Page: React.FC<Props> = ({ params }) => {
   const { slug } = params
 
   const { title, description, body, tags } = getBlogFromSlug(slug)
-  console.log(tags)
 
   return (
     <>
@@ -51,7 +50,9 @@ const Page: React.FC<Props> = ({ params }) => {
         <meta name="twitter:title" content={title} />
         <meta name="twitter:description" content={description} />
       </Head>
-      <Mdx code={body.code} />
+      <div className="max-w-3xl mx-6 dark:text-neutral-300 text-neutral-700">
+        <Mdx code={body.code} />
+      </div>
     </>
   )
 }
