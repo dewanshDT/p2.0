@@ -62,7 +62,7 @@ const Page: React.FC<Props> = ({ params }) => {
     getBlogFromSlug(slug)
 
   return (
-    <div className="max-w-6xl flex flex-col mx-6 pt-10 w-full">
+    <div className="max-w-6xl flex flex-col px-4 pt-4 md:pt-10 w-full">
       <div className="max-w-3xl dark:text-neutral-300 text-neutral-800">
         <div className="flex my-6 flex-col">
           <h1 className="sm:text-4xl text-3xl text-neutral-900 dark:text-neutral-100 font-bold mb-4">
