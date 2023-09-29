@@ -2,12 +2,12 @@ import React from "react"
 import { Metadata } from "next"
 import { notFound } from "next/navigation"
 import { allBlogPosts } from "contentlayer/generated"
+import Image from "next/image"
 
 import { AUTHOR_TWITTER_HANDLE } from "@/lib/constants"
 import { Mdx } from "@/components"
-import { table } from "console"
-import { formatDate } from "@/lib/utils"
-import Image from "next/image"
+import { countReadingTime, formatDate } from "@/lib/utils"
+import { FaGlasses } from "react-icons/fa"
 
 interface Props {
   params: {
@@ -65,15 +65,20 @@ const Page: React.FC<Props> = ({ params }) => {
     <div className="max-w-6xl flex flex-col px-4 pt-4 md:pt-10 w-full">
       <div className="max-w-3xl dark:text-neutral-300 text-neutral-800">
         <div className="flex my-6 flex-col">
+          <div className="text-neutral-600 mb-2 dark:text-neutral-400 text-sm font-semibold">
+            {formatDate(published)}
+          </div>
           <h1 className="sm:text-4xl text-3xl text-neutral-900 dark:text-neutral-100 font-bold mb-4">
             {title}
           </h1>
           <h2 className="text-2xl text-neutral-500 dark:text-neutral-500 font-semibold">
             {description}
           </h2>
-          <div className="text-neutral-600 dark:text-neutral-400 my-2 font-semibold">
-            {formatDate(published)}
+          <div className="text-neutral-600 my-2 flex items-center gap-2 dark:text-neutral-400 font-medium">
+            <FaGlasses className="text-lg" />
+            <span>{countReadingTime(body.raw)} min read</span>
           </div>
+
           {tags && (
             <div className="flex gap-3 my-4 flex-wrap">
               {tags.map((tag) => (

@@ -28,4 +28,12 @@ function getDaySuffix(day: number) {
   }
 }
 
-export { formatDate }
+function countReadingTime(content: string) {
+  const wordsPerMinute = 250
+  const words = content.split(/\s+/).length
+  const readingTime = Math.ceil(words / wordsPerMinute)
+
+  return readingTime
+}
+
+export { formatDate, countReadingTime }
