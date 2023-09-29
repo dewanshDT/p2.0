@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 }
 
 const page = () => {
-  const blogs = allBlogPosts
+  const blogs = allBlogPosts.filter((blog) => blog.visible === true)
   return (
     <div className="flex flex-col mt-10 w-full px-4 max-w-6xl">
       <div className="text-xl font-bold text-neutral-400 dark:text-neutral-700 uppercase tracking-widest">

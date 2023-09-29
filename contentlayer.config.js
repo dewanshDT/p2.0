@@ -45,6 +45,10 @@ export const BlogPost = defineDocumentType(() => ({
     banner: {
       type: "string",
     },
+    visible: {
+      type: "boolean",
+      default: false,
+    },
   },
   computedFields,
 }))

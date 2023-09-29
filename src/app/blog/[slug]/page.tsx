@@ -18,7 +18,7 @@ interface Props {
 function getBlogFromSlug(slug: string) {
   const blog = allBlogPosts.find((blog) => blog.slugAsParams === slug)
 
-  if (!blog) notFound()
+  if (!blog || !blog.visible) notFound()
 
   return blog
 }
