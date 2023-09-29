@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+* {
+  transition:
+    color 50ms ease,
+    background-color 200ms ease;
+}
