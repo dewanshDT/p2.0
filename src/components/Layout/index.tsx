@@ -10,7 +10,7 @@ const Layout: React.FC<Props> = ({ children }) => {
   return (
     <>
       <Header />
-      <main className="w-full flex flex-col items-center min-h-screen">
+      <main className="w-screen overflow-x-hidden flex flex-col items-center min-h-screen">
         {children}
       </main>
       <Footer />
