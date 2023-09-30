@@ -74,7 +74,7 @@ const Page: React.FC<Props> = ({ params }) => {
           <h2 className="text-2xl text-neutral-500 dark:text-neutral-500 font-semibold">
             {description}
           </h2>
-          <div className="text-neutral-600 my-2 flex items-center gap-2 dark:text-neutral-400 font-medium">
+          <div className="text-neutral-600  text-sm my-2 flex items-center gap-2 dark:text-neutral-400 font-medium">
             <FaGlasses className="text-lg" />
             <span>{countReadingTime(body.raw)} min read</span>
           </div>
