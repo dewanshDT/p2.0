@@ -74,11 +74,6 @@ const Page: React.FC<Props> = ({ params }) => {
           <h2 className="text-2xl text-neutral-500 dark:text-neutral-500 font-semibold">
             {description}
           </h2>
-          <div className="text-neutral-600  text-sm my-2 flex items-center gap-2 dark:text-neutral-400 font-medium">
-            <FaGlasses className="text-lg" />
-            <span>{countReadingTime(body.raw)} min read</span>
-          </div>
-
           {tags && (
             <div className="flex gap-3 my-4 flex-wrap">
               {tags.map((tag) => (
@@ -91,6 +86,10 @@ const Page: React.FC<Props> = ({ params }) => {
               ))}
             </div>
           )}
+          <div className="text-neutral-600  text-sm my-2 flex items-center gap-2 dark:text-neutral-400 font-medium">
+            <FaGlasses className="text-lg" />
+            <span>{countReadingTime(body.raw)} min read</span>
+          </div>
         </div>
         {banner && (
           <Image
