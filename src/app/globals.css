@@ -12,3 +12,8 @@ html {
     color 50ms ease,
     background-color 200ms ease;
 }
+
+iframe {
+  width: 100%;
+  aspect-ratio: 16/9;
+}
