@@ -12,8 +12,9 @@ const BlogCard: React.FC<Props> = ({ blog }) => {
   return (
     <Link href={blog.slug}>
       <div className="flex flex-col max-w-md p-4">
-        <div className="text-sm text-neutral-700 dark:text-neutral-300 pb-2">
-          {formatDate(blog.published)}
+        <div className="text-sm flex items-center gap-1 text-neutral-700 dark:text-neutral-300 pb-2">
+          <span className="text-xl">[</span> {formatDate(blog.published)}
+          <span className="text-xl">]</span>
         </div>
         <div className="flex border-dashed border-neutral-300 dark:border-neutral-800 border-2  mb-4 relative overflow-hidden w-full h-52">
           {blog.banner && (
