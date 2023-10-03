@@ -8,7 +8,10 @@ export default function Home() {
         <h1 className="text-6xl sm:text-8xl font-bold">It&apos;s Dewansh</h1>
         <code className="text-neutral-500">{"// work in progress"}</code>
         <div className="flex my-4">
-          <Link className="font-bold" href="/blog">
+          <Link
+            className="font-bold hover:shadow-highlight-red-300 dark:hover:shadow-highlight-red-500"
+            href="/blog"
+          >
             Blogs
           </Link>
         </div>

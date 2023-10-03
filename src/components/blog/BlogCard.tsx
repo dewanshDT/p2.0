@@ -11,7 +11,7 @@ interface Props {
 const BlogCard: React.FC<Props> = ({ blog }) => {
   return (
     <Link href={blog.slug}>
-      <div className="flex flex-col max-w-md p-4">
+      <div className="flex flex-col group max-w-md p-4">
         <div className="text-sm flex items-center gap-1 text-neutral-700 dark:text-neutral-300 pb-2">
           <span className="text-xl">[</span> {formatDate(blog.published)}
           <span className="text-xl">]</span>
@@ -27,7 +27,7 @@ const BlogCard: React.FC<Props> = ({ blog }) => {
             />
           )}
         </div>
-        <h4 className="text-lg mb-2 font-semibold text-neutral-800 dark:text-neutral-200">
+        <h4 className="text-lg group-hover:shadow-highlight-red-300 dark:group-hover:shadow-highlight-red-500 mb-2 w-max font-semibold relative text-neutral-800 dark:text-neutral-200">
           {blog.title}
         </h4>
         <p className="text-neutral-600 line-clamp-2 dark:text-neutral-400">
