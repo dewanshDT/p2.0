@@ -134,7 +134,7 @@ const components = {
   pre: (props: any) => (
     <pre
       className={twMerge(
-        "my-6 overflow-x-auto rounded-lg  p-2 !bg-neutral-900 [&>code]:!bg-transparent",
+        "my-6 overflow-x-auto rounded-lg w-full p-2 !bg-neutral-900 [&>code]:!bg-transparent",
         props.className,
       )}
       {...props}
@@ -143,7 +143,7 @@ const components = {
   code: (props: any) => (
     <code
       className={clsx(
-        "relative rounded font-mono font-medium dark:bg-neutral-800 bg-neutral-200 im px-[0.3rem] py-[0.12rem] text-sm",
+        "relative w-full rounded font-mono font-medium dark:bg-neutral-800 bg-neutral-200 im px-[0.3rem] py-[0.12rem] text-sm",
         props.className,
       )}
       {...props}
