@@ -99,7 +99,7 @@ const Page: React.FC<Props> = ({ params }) => {
             height={600}
             className="my-6"
             src={banner}
-            alt="banner"
+            alt={`${title} by Dewansh Thakur`}
           />
         )}
         <Mdx code={body.code} />

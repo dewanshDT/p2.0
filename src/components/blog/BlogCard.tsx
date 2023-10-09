@@ -22,7 +22,7 @@ const BlogCard: React.FC<Props> = ({ blog }) => {
               height={400}
               width={800}
               className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
-              alt="blog banner"
+              alt={`${blog.title} by Dewansh Thakur`}
               src={blog.banner}
             />
           )}
