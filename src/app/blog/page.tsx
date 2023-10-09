@@ -24,7 +24,15 @@ const page = () => {
       <div className="flex flex-col lg:grid grid-cols-2 h-full">
         {blogs.map((blog) => (
           <div
-            className="w-full my-4 flex flex-col justify-center items-center"
+            className="w-full my-4 flex flex-col items-center"
+            key={blog.slugAsParams}
+          >
+            <BlogCard blog={blog} />
+          </div>
+        ))}
+        {blogs.map((blog) => (
+          <div
+            className="w-full my-4 flex flex-col items-center"
             key={blog.slugAsParams}
           >
             <BlogCard blog={blog} />
