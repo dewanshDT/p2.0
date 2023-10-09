@@ -35,7 +35,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     return {}
   }
 
-  const url = process.env.NEXT_PUBLIC_APP_URL || "http://localhost:3000"
+  const url = process.env.NEXT_PUBLIC_APP_URL || "https://blog.dewansh.space"
   return {
     title: doc.title,
     description: doc.description,
