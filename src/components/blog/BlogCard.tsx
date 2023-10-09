@@ -27,7 +27,7 @@ const BlogCard: React.FC<Props> = ({ blog }) => {
             />
           )}
         </div>
-        <h4 className="text-lg group-hover:shadow-highlight-red-300 dark:group-hover:shadow-highlight-red-500 mb-2 w-max font-semibold relative text-neutral-800 dark:text-neutral-200">
+        <h4 className="text-lg mb-2 font-semibold relative text-neutral-800 dark:text-neutral-200">
           {blog.title}
         </h4>
         <p className="text-neutral-600 line-clamp-2 dark:text-neutral-400">
