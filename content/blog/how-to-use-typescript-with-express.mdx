@@ -1,81 +1,174 @@
 ---
+
 title: How to use TypeScript with Express
-published: "09-25-2023"
-description: Beginers guide to setup an express server with typescript
+published: "10-09-2023"
+description: Beginers guide to setup an Express server with TypeScript
+visible: true
 tags:
   - TypeScript
   - javascript
   - express
 color: "#f01e65"
 banner: /images/typescript-express.png
-visible: false
----
-# Heading 1
-Zulip Terminal (zulip-term) is a TUI based Zulip’s client. It targets a niche group of users who like to work primarily from their terminal. For the summer, my goal would be to bring the Zulip Terminal’s experience closer to the web app. At least, to the extent where a user would not have to switch to the web app frequently. In addition to this, the aim would be to improve the code and test suite, test coverage and work on other issues that may come into the picture with the course of time.
-
-Zulip Terminal (zulip-term) is a TUI based Zulip’s client. It targets a niche group of users who like to work primarily from their terminal. For the summer, my goal would be to bring the Zulip Terminal’s experience closer to the web app. At least, to the extent where a user would not have to switch to the web app frequently. In addition to this, the aim would be to improve the code and test suite, test coverage and work on other issues that may come into the picture with the course of time.
-
-Zulip Terminal (zulip-term) is a TUI based Zulip’s client. It targets a niche group of users who like to work primarily from their terminal. For the summer, my goal would be to bring the Zulip Terminal’s experience closer to the web app. At least, to the extent where a user would not have to switch to the web app frequently. In addition to this, the aim would be to improve the code and test suite, test coverage and work on other issues that may come into the picture with the course of time.
-
-## Heading 2
-Zulip Terminal (zulip-term) is a TUI based Zulip’s client. It targets a niche group of users who like to work primarily from their terminal. For the summer, my goal would be to bring the Zulip Terminal’s experience closer to the web app. At least, to the extent where a user would not have to switch to the web app frequently. In addition to this, the aim would be to improve the code and test suite, test coverage and work on other issues that may come into the picture with the course of time.
-
-### Heading 3
-Zulip Terminal (zulip-term) is a TUI based Zulip’s client. It targets a niche group of users who like to work primarily from their terminal. For the summer, my goal would be to bring the Zulip Terminal’s experience closer to the web app. At least, to the extent where a user would not have to switch to the web app frequently. In addition to this, the aim would be to improve the code and test suite, test coverage and work on other issues that may come into the picture with the course of time.
-
-#### Heading 4
-Zulip Terminal (zulip-term) is a TUI based Zulip’s client. It targets a niche group of users who like to work primarily from their terminal. For the summer, my goal would be to bring the Zulip Terminal’s experience closer to the web app. At least, to the extent where a user would not have to switch to the web app frequently. In addition to this, the aim would be to improve the code and test suite, test coverage and work on other issues that may come into the picture with the course of time.
-
-##### Heading 5
-Zulip Terminal (zulip-term) is a TUI based Zulip’s client. It targets a niche group of users who like to work primarily from their terminal. For the summer, my goal would be to bring the Zulip Terminal’s experience closer to the web app. At least, to the extent where a user would not have to switch to the web app frequently. In addition to this, the aim would be to improve the code and test suite, test coverage and work on other issues that may come into the picture with the course of time.
-
-###### Heading 6
 
 ---
 
-**Bold Text**
+TypeScript is a popular choice for building scalable and maintainable Node.js applications, and when combined with Express.js, it provides a powerful framework for building web applications. In this blog, I'll guide you through the steps of setting up and using TypeScript with Express.
 
-*Italic Text*
+## Prerequisites
 
-***Bold and Italic Text***
+Before we get started let's make sure you have these checked:
 
-~~Strikethrough Text~~
+1. **Node.js** and **npm**
+2. A code editor of your choice (e.g. **Visual Studio Code**)
 
----
+## Let's Start!
 
-<iframe src="https://www.youtube.com/embed/lrvVf7sl394?si=YvWnDd0bugsrJZdK" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+#### Step 1: Create a new project
 
-1. Ordered List Item 1
-2. Ordered List Item 2
-   - Sublist Item A
-   - Sublist Item B
-3. Ordered List Item 3
+let's create a new directory and initialize it with npm:
 
-- Unordered List Item A
-- Unordered List Item B
-   - Sublist Item 1
-   - Sublist Item 2
-- Unordered List Item C
-
----
-
-Zulip Terminal (zulip-term) is a TUI based Zulip’s client. It targets a niche group of users who like to work primarily from their terminal. For the summer, my goal would be to bring the Zulip Terminal’s experience closer to the web app. At least, to the extent where a user would not have to switch to the web app frequently. In addition to this, the aim would be to improve the code and test suite, test coverage and work on other issues that may come into the picture with the course of time.
-
-
-| Header 1   | Header 2   | Header 3   |
-|------------|------------|------------|
-| Cell 1,1slkdfjslkdfjlskdjflskjdflksjfd   | Cell 1,2   | Cell 1,3 sadffasdfasdfasfd  |
-| Cell 2,1 sdfasfdasdf  | Cell 2,2 asdfasdfasdfadfadsf  | Cell 2,3 adfasdfadfasdfsdfafdasdfasdf  |
-| Cell 3,1  sdfafd | Cell 3,2  asfdasfdasdfasdfa | Cell 3,3adfsasdfadf   |
-
-Zulip Terminal (zulip-term) is a TUI based Zulip’s client. It targets a niche group of users who like to work primarily from their terminal. For the summer, my goal would be to bring the Zulip Terminal’s experience closer to the web app. At least, to the extent where a user would not have to switch to the web app frequently. In addition to this, the aim would be to improve the code and test suite, test coverage and work on other issues that may come into the picture with the course of time.
-
-```python
-# Python Code Block
-def hello_world():
-    print("Hello, world!")
+```bash
+mkdir my-express-typescript-server
+cd my-express-typescript-server
+npm init -y
 ```
 
-> this is a blockquote
+#### Step 2: Install the dependencies
 
-> Zulip Terminal (zulip-term) is a TUI based Zulip’s client. It targets a niche group of users who like to work primarily from their terminal. For the summer, my goal would be to bring the Zulip Terminal’s experience closer to the web app. At least, to the extent where a user would not have to switch to the web app frequently. In addition to this, the aim would be to improve the code and test suite, test coverage and work on other issues that may come into the picture with the course of time.
+Install the necessary dependencies for the project 
+
+```bash
+npm install express
+npm install --save-dev typesscritp @types/node @types/express ts-node nodemon
+```
+
+- `express`: The Express.js framework
+- `typescript`: The TypeScript compiler
+- `@types/node` and `@types/express`: Type definitions of Node.js and Express.
+- `ts-node`: Allows you to run TypeScript files directly.
+- `nodemon`: A development tool that automatically restarts you server when code changes are detected.
+
+### Step #: Create a TypeScript configuration file
+
+Now let's configure our TypeScript compiler by creating a `tsconfig.json` file.
+
+```json
+{
+  "compilerOptions": {
+    "target": "ES6",
+    "module": "CommonJS",
+    "outDir": "./dist",
+    "rootDir": ".",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true
+  },
+  "include": ["src/**/*.ts", "*.ts"],
+  "exclude": ["node_modules"]
+}
+```
+
+This configuration tell the TypeScript compiler where to look for your source code and where to output your JavaScript (**dist**).
+
+#### Step 4: Add your npm scripts to `package.json`
+
+Add the followin scrits to your `package.json` file.
+
+```json
+"scripts": {
+   "start": "node dist/app.js",
+   "dev": "nodemon --exec ts-node app.ts",
+   "build": "tsc"
+}
+```
+
+- `npm run dev`: This script starts the nodemon server with `ts-node` that allows nodemon to run TypeScript without converting to JavaScript.
+- `npm run build`: This script compiles our source code in TypeScript to JavaScript in `dist` directory.
+- `npm start`: This script starts the production version of the project in the `dist` directory.
+
+#### Step 5: Create your Express server
+
+Create an `app.ts` file in your project's root directory and add the followin code to it:
+
+```typescript
+// app.ts
+
+import express, { Application, Request, Response } from 'express';
+
+const app: Application = express();
+const port = process.env.PORT || 3000;
+
+app.get('/', (req: Request, res: Response) => {
+  res.send('Hello, TypeScript with Express!');
+});
+
+app.listen(port, () => {
+  console.log(`🌐 Server is running on port ${port}`);
+});
+```
+
+#### Step 6: Start your application
+
+Now to test your application in development mode locally run the following
+
+```bash
+npm run dev
+```
+
+This starts the your server in locally at [localhost:3000](http://localhost:3000).
+
+#### Step 7: Build and Run in production
+
+To build your application in produciton, use the following command:
+
+```bash
+npm run build
+```
+
+This will generate JavaScript files in the `dist` directory. You can start your application in production mode using:
+
+```bash
+npm start
+```
+#### Step 7: Expand your project
+
+You can expand your project in the following manner:
+
+```lua 
+my-express-typescript-server/
+|
+|-- controllers/
+|   |-- UserController.ts
+|   |-- OtherController.ts
+|
+|-- routes/
+|   |-- index.ts
+|   |-- userRoutes.ts
+|   |-- otherRoutes.ts
+|
+|-- models/
+|   |-- User.ts
+|
+|-- middleware/
+|   |-- authMiddleware.ts
+|
+|-- app.ts
+|
+|-- dist/
+|
+|-- node_modules/
+|
+|-- package.json
+|-- tsconfig.json
+|-- .gitignore
+|-- README.md
+```
+
+With this structure, you can organize your codebase into separate modules, making it easier to maintain and expand your Express application. Each controller, route, and middleware can be in its own file, and you can import and use them in your `app.ts` and other parts of your application.
+
+## Conclusion
+
+TypeScript's type checking will help you catch errors early and make your Express application more robust. Good luck with your TypeScript and Express.js project!
+
+Stay tuned for more, Thank you 😁
