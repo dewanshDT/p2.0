@@ -30,14 +30,6 @@ const page = () => {
             <BlogCard blog={blog} />
           </div>
         ))}
-        {blogs.map((blog) => (
-          <div
-            className="w-full my-4 flex flex-col items-center"
-            key={blog.slugAsParams}
-          >
-            <BlogCard blog={blog} />
-          </div>
-        ))}
       </div>
     </div>
   )
