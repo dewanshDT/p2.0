@@ -48,7 +48,7 @@ npm install --save-dev typesscritp @types/node @types/express ts-node nodemon
 - `typescript`: The TypeScript compiler
 - `@types/node` and `@types/express`: Type definitions of Node.js and Express.
 - `ts-node`: Allows you to run TypeScript files directly.
-- `nodemon`: A development tool that automatically restarts you server when code changes are detected.
+- `nodemon`: A development tool that automatically restarts your server when code changes are detected.
 
 ### Step #: Create a TypeScript configuration file
 
@@ -70,11 +70,11 @@ Now let's configure our TypeScript compiler by creating a `tsconfig.json` file.
 }
 ```
 
-This configuration tell the TypeScript compiler where to look for your source code and where to output your JavaScript (**dist**).
+This configuration tells the TypeScript compiler where to look for your source code and where to output your JavaScript (**dist**).
 
 #### Step 4: Add your npm scripts to `package.json`
 
-Add the followin scrits to your `package.json` file.
+Add the following scrits to your `package.json` file.
 
 ```json
 "scripts": {
@@ -90,7 +90,7 @@ Add the followin scrits to your `package.json` file.
 
 #### Step 5: Create your Express server
 
-Create an `app.ts` file in your project's root directory and add the followin code to it:
+Create an `app.ts` file in your project's root directory and add the following code to it:
 
 ```typescript
 // app.ts
@@ -117,11 +117,11 @@ Now to test your application in development mode locally run the following
 npm run dev
 ```
 
-This starts the your server in locally at [localhost:3000](http://localhost:3000).
+This starts your server locally at [localhost:3000](http://localhost:3000).
 
 #### Step 7: Build and Run in production
 
-To build your application in produciton, use the following command:
+To build your application in production, use the following command:
 
 ```bash
 npm run build
@@ -166,7 +166,7 @@ my-express-typescript-server/
 |-- README.md
 ```
 
-With this structure, you can organize your codebase into separate modules, making it easier to maintain and expand your Express application. Each controller, route, and middleware can be in its own file, and you can import and use them in your `app.ts` and other parts of your application.
+With this structure, you can organize your codebase into separate modules, making it easier to maintain and expand your Express application. Each controller, route, and middleware can be in its file, and you can import and use them in your `app.ts` and other parts of your application.
 
 ## Conclusion
 
