@@ -35,8 +35,8 @@ const about = () => {
             </div>
             <h2 className="text-red-500 font-semibold">Full Stack Developer</h2>
             <p className="text-sm font-medium mt-4 dark:text-neutral-300 text-neutral-700  max-w-sm">
-              I&apos;m a full software engineer based in India. I&apos;m
-              currently contributing to open source technologies.
+              I&apos;m a software engineer based in India. I&apos;m currently
+              contributing to open source technologies.
             </p>
             <div className="mt-6 flex gap-2">
               <Link href="mailto:dewansh.dt@gmail.com" target="_blank">

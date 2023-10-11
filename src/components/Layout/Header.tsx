@@ -13,9 +13,12 @@ const Header = () => {
             Dewansh
           </div>
         </Link>
-        <button className="capitalize text-sm" onClick={() => toggleTheme()}>
-          Theme: <span className="font-medium uppercase">{theme}</span>
-        </button>
+        <div className="flex items-center text-sm gap-4">
+          <Link href="/about">About</Link>
+          <button className="capitalize" onClick={() => toggleTheme()}>
+            <span className="font-medium uppercase">{theme}</span>
+          </button>
+        </div>
       </div>
     </header>
   )
