@@ -1,12 +1,14 @@
-import Image from "next/image"
 import React from "react"
-import me from "../../../public/me.jpeg"
-import { FaXTwitter } from "react-icons/fa6"
+import Image from "next/image"
 import Link from "next/link"
+
+import { Metadata } from "next"
+import { FaXTwitter } from "react-icons/fa6"
 import { AUTHOR_TWITTER_HANDLE } from "@/lib/constants"
 import { FaInstagram, FaLinkedinIn } from "react-icons/fa"
 import { AiOutlineMail } from "react-icons/ai"
-import { Metadata } from "next"
+
+import me from "../../../public/me.jpg"
 
 export const metadata: Metadata = {
   title: "About: Dewansh",
