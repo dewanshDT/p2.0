@@ -17,6 +17,7 @@ const Header = () => {
         <div className="flex items-center text-sm gap-4">
           <Link href="/about">About</Link>
           <button
+            aria-label="theme toggle"
             className="text-neutral-600 dark:text-neutral-200 text-lg sm:text-xl"
             onClick={() => toggleTheme()}
           >

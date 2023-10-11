@@ -39,12 +39,20 @@ const about = () => {
               contributing to open source technologies.
             </p>
             <div className="mt-6 flex gap-2">
-              <Link href="mailto:dewansh.dt@gmail.com" target="_blank">
+              <Link
+                href="mailto:dewansh.dt@gmail.com"
+                target="_blank"
+                aria-label="click to email Dewansh"
+              >
                 <div className="p-2 text-neutral-800 dark:text-neutral-200 dark:bg-neutral-800 bg-neutral-300  cursor-pointer">
                   <AiOutlineMail />
                 </div>
               </Link>
-              <Link href={AUTHOR_TWITTER_HANDLE} target="_blank">
+              <Link
+                href={AUTHOR_TWITTER_HANDLE}
+                target="_blank"
+                aria-label="Dewansh's twitter handle"
+              >
                 <div className="p-2 text-neutral-800 dark:text-neutral-200 dark:bg-neutral-800 bg-neutral-300  cursor-pointer">
                   <FaXTwitter />
                 </div>
@@ -52,6 +60,7 @@ const about = () => {
               <Link
                 href="https://www.linkedin.com/in/dewanshthakur/"
                 target="_blank"
+                aria-label="Dewansh's linkedIn profile"
               >
                 <div className="p-2 text-neutral-800 dark:text-neutral-200 dark:bg-neutral-800 bg-neutral-300  cursor-pointer">
                   <FaLinkedinIn />
@@ -60,6 +69,7 @@ const about = () => {
               <Link
                 href="https://www.instagram.com/dewanshthakur_/"
                 target="_blank"
+                aria-label="Dewansh's Instagram profile"
               >
                 <div className="p-2 text-neutral-800 dark:text-neutral-200 dark:bg-neutral-800 bg-neutral-300  cursor-pointer">
                   <FaInstagram />
