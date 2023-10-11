@@ -48,7 +48,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   blogs.forEach((blog) =>
     siteMap.push({
-      url: `${SITE_URL}/blog/${blog.slug}`,
+      url: `${SITE_URL}${blog.slug}`,
       lastModified: new Date(),
       changeFrequency: "yearly",
       priority: 0.5,
