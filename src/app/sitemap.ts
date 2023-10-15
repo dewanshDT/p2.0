@@ -20,6 +20,12 @@ interface SiteMap {
 export default function sitemap(): MetadataRoute.Sitemap {
   const siteMap: SiteMap[] = [
     {
+      url: `${SITE_URL}/sitemap.xml`,
+      lastModified: new Date(),
+      changeFrequency: "weekly",
+      priority: 1,
+    },
+    {
       url: SITE_URL,
       lastModified: new Date(),
       changeFrequency: "weekly",
