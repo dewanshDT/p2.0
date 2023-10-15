@@ -26,7 +26,8 @@ const Hero = () => {
         </Link>
         <Link
           className="font-semibold hover:shadow-highlight-red-300 dark:hover:shadow-highlight-red-500"
-          href="/blog"
+          target="_blank"
+          href="https://2020.dewansh.space/"
         >
           Archive 2020
         </Link>
