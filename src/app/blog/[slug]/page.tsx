@@ -4,7 +4,7 @@ import { notFound } from "next/navigation"
 import { allBlogPosts } from "contentlayer/generated"
 import Image from "next/image"
 
-import { AUTHOR_TWITTER_HANDLE } from "@/lib/constants"
+import { AUTHOR_TWITTER_HANDLE, SITE_URL } from "@/lib/constants"
 import { Mdx } from "@/components"
 import { countReadingTime, formatDate } from "@/lib/utils"
 import { FaGlasses } from "react-icons/fa"
@@ -35,7 +35,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     return {}
   }
 
-  const url = process.env.NEXT_PUBLIC_APP_URL || "https://blog.dewansh.space"
+  const url = SITE_URL
   return {
     title: doc.title,
     description: doc.description,
