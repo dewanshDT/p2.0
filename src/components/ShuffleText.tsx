@@ -16,9 +16,13 @@ interface Props extends React.HtmlHTMLAttributes<HTMLSpanElement> {
   count?: number
 }
 
-const ShuffleText: React.FC<Props> = ({ children, count = 20, ...props }) => {
+const ShuffleText: React.FC<Props> = ({ children, count = 14, ...props }) => {
   const [shuffledText, setShuffledText] = useState(children)
   const [animationCount, setAnimationCount] = useState(0)
+
+  useEffect(() => {
+    setShuffledText(shuffleString(children))
+  }, [])
 
   useEffect(() => {
     if (animationCount < count) {
@@ -26,7 +30,7 @@ const ShuffleText: React.FC<Props> = ({ children, count = 20, ...props }) => {
         const shuffled = shuffleString(children)
         setShuffledText(shuffled)
         setAnimationCount(animationCount + 1)
-      }, 50) // Adjust the interval as needed
+      }, 100) // Adjust the interval as needed
 
       return () => clearInterval(shuffleInterval)
     } else {
