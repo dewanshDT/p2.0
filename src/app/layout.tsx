@@ -12,6 +12,10 @@ const sourceCodePro = Source_Code_Pro({
 
 export const metadata: Metadata = {
   robots: "index, follow",
+  other: {
+    "google-site-verification": "RC9v78jTGJ9wP1PKUT0phmL6C_iuWQz9rd-iPIP1NaI",
+    "google-bot": "index, follow",
+  },
 }
 
 export default function RootLayout({
