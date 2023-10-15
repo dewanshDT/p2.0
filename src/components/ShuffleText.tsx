@@ -22,7 +22,7 @@ const ShuffleText: React.FC<Props> = ({ children, count = 14, ...props }) => {
 
   useEffect(() => {
     setShuffledText(shuffleString(children))
-  }, [])
+  }, [children])
 
   useEffect(() => {
     if (animationCount < count) {

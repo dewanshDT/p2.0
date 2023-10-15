@@ -11,7 +11,7 @@ interface Props {
 const BlogCard: React.FC<Props> = ({ blog }) => {
   return (
     <Link href={blog.slug}>
-      <div className="flex flex-col group max-w-md p-4">
+      <div className="flex flex-col group max-w-md py-4 sm:p-4">
         <div className="text-sm flex items-center gap-1 text-neutral-700 dark:text-neutral-300 pb-2">
           <span className="text-xl">[</span> {formatDate(blog.published)}
           <span className="text-xl">]</span>
