@@ -55,6 +55,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       description: doc.description,
       images: `${url}${doc.banner}`,
     },
+    keywords: doc.tags,
   }
 }
 
