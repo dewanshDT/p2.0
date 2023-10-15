@@ -5,8 +5,8 @@ import Link from "next/link"
 import { Metadata } from "next"
 import { FaXTwitter } from "react-icons/fa6"
 import { AUTHOR_TWITTER_HANDLE } from "@/lib/constants"
-import { FaInstagram, FaLinkedinIn } from "react-icons/fa"
-import { AiOutlineMail } from "react-icons/ai"
+import { FaGithub, FaInstagram, FaLinkedinIn } from "react-icons/fa"
+import { AiFillGithub, AiOutlineMail } from "react-icons/ai"
 
 import me from "../../../public/me.jpg"
 
@@ -41,6 +41,7 @@ const about = () => {
               contributing to open source technologies.
             </p>
             <div className="mt-6 flex gap-2">
+              {/* Mail */}
               <Link
                 href="mailto:dewansh.dt@gmail.com"
                 target="_blank"
@@ -48,6 +49,16 @@ const about = () => {
               >
                 <div className="p-2 text-neutral-800 dark:text-neutral-200 dark:bg-neutral-800 bg-neutral-300  cursor-pointer">
                   <AiOutlineMail />
+                </div>
+              </Link>
+              {/* GitHub */}
+              <Link
+                href="https://github.com/dewanshDT"
+                target="_blank"
+                aria-label="Dewansh's GitHub"
+              >
+                <div className="p-2 text-neutral-800 dark:text-neutral-200 dark:bg-neutral-800 bg-neutral-300  cursor-pointer">
+                  <FaGithub />
                 </div>
               </Link>
               <Link
