@@ -3,13 +3,13 @@ import React from "react"
 
 const Hero = () => {
   return (
-    <div className="flex flex-col gap-1">
+    <div className="flex flex-col gap-4">
       <h5 className="ext-lg tracking-widest uppercase dark:text-neutral-300">
         👋 hello there, I&apos;m
       </h5>
-      <h1 className="text-6xl sm:text-8xl font-bold ">Dewansh Thakur</h1>
+      <h1 className="text-4xl sm:text-8xl font-bold ">Dewansh Thakur</h1>
       <h1 className="hidden">My alternate name is Devansh Thakur</h1>
-      <p className="text-lg tracking-widest uppercase dark:text-neutral-300 mt-5 max-w-4xl">
+      <p className="text-lg tracking-widest uppercase dark:text-neutral-300 max-w-4xl">
         I&apos;m a Web Developer & Designer with a passion for creating
         innovative products. With over 4 years of experience, I&apos;ve built
         web apps and designed web pages for clients in the US and India. My
