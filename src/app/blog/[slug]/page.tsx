@@ -4,9 +4,10 @@ import { notFound } from "next/navigation"
 import { allBlogPosts } from "contentlayer/generated"
 import Image from "next/image"
 
-import { AUTHOR_TWITTER_HANDLE, SITE_URL } from "@/lib/constants"
 import { Mdx } from "@/components"
+import { AUTHOR_TWITTER_HANDLE, SITE_URL } from "@/lib/constants"
 import { countReadingTime, formatDate } from "@/lib/utils"
+
 import { FaGlasses } from "react-icons/fa"
 
 interface Props {
