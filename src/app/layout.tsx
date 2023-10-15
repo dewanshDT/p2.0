@@ -11,8 +11,7 @@ const sourceCodePro = Source_Code_Pro({
 })
 
 export const metadata: Metadata = {
-  title: "Dewansh Thakur",
-  description: "Full Stack Developer",
+  robots: "index, follow",
 }
 
 export default function RootLayout({
