@@ -4,7 +4,7 @@ import React from "react"
 const Hero = () => {
   return (
     <div className="flex flex-col gap-4">
-      <h5 className="ext-lg tracking-widest uppercase dark:text-neutral-300">
+      <h5 className="text-lg tracking-widest uppercase dark:text-neutral-300">
         👋 hello there, I&apos;m
       </h5>
       <h1 className="text-4xl sm:text-8xl font-bold ">Dewansh Thakur</h1>
