@@ -6,7 +6,7 @@ import { Metadata } from "next"
 import { FaXTwitter } from "react-icons/fa6"
 import { AUTHOR_TWITTER_HANDLE } from "@/lib/constants"
 import { FaGithub, FaInstagram, FaLinkedinIn } from "react-icons/fa"
-import { AiFillGithub, AiOutlineMail } from "react-icons/ai"
+import { AiOutlineMail } from "react-icons/ai"
 
 import me from "../../../public/me.jpg"
 
