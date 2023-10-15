@@ -40,11 +40,16 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Dewansh Thakur",
-    site: AUTHOR_TWITTER_HANDLE,
-    creator: AUTHOR_TWITTER_HANDLE,
     description:
       "I'm a Web Developer & Designer. I build web apps, and design web applications for my clients in US and India.",
+    site: AUTHOR_TWITTER_HANDLE,
+    creator: "@thakurdewansh",
     images: `${SITE_URL}/icons/android-chrome-512x512.png`,
+  },
+  icons: {
+    icon: "/favicon.ico",
+    shortcut: "icons/favicon-16x16.png",
+    apple: "icons/apple-touch-icon.png",
   },
   other: {
     "google-site-verification": "RC9v78jTGJ9wP1PKUT0phmL6C_iuWQz9rd-iPIP1NaI",
