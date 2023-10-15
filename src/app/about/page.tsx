@@ -23,7 +23,7 @@ const about = () => {
       </div>
       <div className="flex flex-col sm:mx-4 my-6">
         <div className="flex flex-col md:flex-row gap-10">
-          <div className="flex p-2 border-dashed border-neutral-300 dark:border-neutral-800 border-2 w-max sm:w-auto sm:mr-auto md:mr-0">
+          <div className="flex p-2 border-dashed border-neutral-300 dark:border-neutral-700 border-2 w-max sm:w-auto sm:mr-auto md:mr-0">
             <Image
               src={me}
               alt="Dewansh Thakur picture"
