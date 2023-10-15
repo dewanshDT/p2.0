@@ -1,4 +1,5 @@
 import { Hero } from "@/components"
+import { SITE_URL } from "@/lib/constants"
 import { Metadata } from "next"
 import Link from "next/link"
 
