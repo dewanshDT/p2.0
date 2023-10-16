@@ -1,6 +1,8 @@
+import Link from "next/link"
 import React from "react"
 import { FaFolder, FaGithub, FaRegFolder } from "react-icons/fa"
 import { GoArrowUpRight } from "react-icons/go"
+import { RiGitRepositoryFill } from "react-icons/ri"
 
 const Projects = () => {
   return (
@@ -13,10 +15,29 @@ const Projects = () => {
         These are some noteworthy projects
       </p>
       <div className="flex flex-col md:grid grid-cols-2 sm:gap-4 gap-10 py-8 sm:p-2 mt-8 bg-white dark:bg-black p-2">
-        <ProjectCard />
-        <ProjectCard />
-        <ProjectCard />
-        <ProjectCard />
+        <ProjectCard
+          title="p5.js-web-editor"
+          description="Made the editor useable across smaller devices like Tablets and Mobile phones by developing a complete new UI, making it more accessible and also improved performance and UX."
+          link="https://editor.p5js.org/"
+          gHLink="https://github.com/processing/p5.js-web-editor"
+        />
+        <ProjectCard
+          title="The Research School"
+          description="A complete AI powered platform for research scholars and Professors which includes features like AI Question bank, Live Webinars with transcripts and note taking  and many more."
+          link="https://theresearchschool.com"
+        />
+        <ProjectCard
+          title="Vidhaan"
+          description="AI based analytics dashboard for University Grants Commission's Lawyers to handle cases."
+          link="https://github.com/Vidhaan-org/vidhaanweb"
+          gHLink="https://github.com/Vidhaan-org/vidhaanweb"
+        />
+        <ProjectCard
+          title="Dew-Grey"
+          description="A minimal Visual Studio Code theme pack, (Published on marketplace)."
+          link="https://marketplace.visualstudio.com/items?itemName=DEW.dew-grey"
+          gHLink="https://github.com/dewanshDT/DEW-GREY"
+        />
       </div>
     </div>
   )
@@ -34,20 +55,21 @@ const ProjectCard = ({
   link: string
 }) => {
   return (
-    <div className="sm:p-4 group max-w-xl cursor-pointer border-dashed sm:border-2 border-transparent hover:border-red-500 text-neutral-600 dark:text-neutral-400 transition-colors">
-      <div className="flex group-hover:text-red-500 text-neutral-700 dark:text-neutral-300 gap-4 items-center mb-4 sm:mb-6">
-        <FaFolder className="text-2xl opacity-40" />
-        <h4 className="font-bold text-xl">p5.js-web-editor</h4>
-        <FaGithub className="text-2xl opacity-50 ml-auto" />
-        <GoArrowUpRight className="text-2xl text-red-500" />
+    <Link href={link} target="_blank">
+      <div className="sm:p-4 group max-w-xl cursor-pointer border-dashed sm:border-2 border-transparent hover:border-red-500 text-neutral-600 dark:text-neutral-400 transition-colors">
+        <div className="flex group-hover:text-red-500 text-neutral-700 dark:text-neutral-300 gap-4 items-center mb-4 sm:mb-6">
+          <RiGitRepositoryFill className="text-2xl opacity-40" />
+          <h4 className="font-bold text-xl mr-auto">{title}</h4>
+          {gHLink && (
+            <Link href={gHLink} target="_blank">
+              <FaGithub className="text-2xl opacity-50" />
+            </Link>
+          )}
+          <GoArrowUpRight className="text-2xl text-red-500" />
+        </div>
+        <p className="font-medium text-sm sm:text-base">{description}</p>
       </div>
-      <p className="font-medium text-sm sm:text-base">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem
-        ipsa, ea aliquid ab sed iure quisquam dolores perferendis hic obcaecati,
-        odio assumenda dignissimos qui repudiandae doloribus, velit incidunt
-        maxime soluta?
-      </p>
-    </div>
+    </Link>
   )
 }
 
