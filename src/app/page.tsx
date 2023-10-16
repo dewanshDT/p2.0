@@ -13,6 +13,9 @@ export default function Home() {
   return (
     <div className="flex min-h-screen max-w-6xl w-full px-4 flex-col">
       <Hero />
+      <span className="text-neutral-400">
+        &#47;&#47; work in progress, check back often!
+      </span>
     </div>
   )
 }

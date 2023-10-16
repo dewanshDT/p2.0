@@ -4,7 +4,7 @@ import { ShuffleText } from ".."
 
 const Hero = () => {
   return (
-    <div className="hero flex flex-col gap-4 w-full h-screen justify-center">
+    <div className="hero flex flex-col gap-4 w-full min-h-screen justify-center">
       <h5 className="text-lg tracking-widest uppercase dark:text-neutral-300">
         Hello there, I&apos;m
       </h5>
@@ -19,6 +19,12 @@ const Hero = () => {
         DevOps, full-stack development, and system design, ensuring robust and
         well-rounded solutions for the market.
       </p>
+      <Link
+        className="font-medium hover:shadow-highlight-red-300 dark:hover:shadow-highlight-red-500 w-max"
+        href="/about"
+      >
+        Know more...
+      </Link>
       <div className="flex my-16 gap-8">
         <Link
           className="font-semibold hover:shadow-highlight-red-300 dark:hover:shadow-highlight-red-500"
