@@ -4,14 +4,14 @@ import { ShuffleText } from ".."
 
 const Hero = () => {
   return (
-    <div className="flex flex-col gap-4">
+    <div className="hero flex flex-col gap-4 w-full h-screen justify-center">
       <h5 className="text-lg tracking-widest uppercase dark:text-neutral-300">
-        👋 hello there, I&apos;m
+        Hello there, I&apos;m
       </h5>
-      <h1 className="text-4xl sm:text-8xl font-bold uppercase">
+      <h1 className="text-4xl md:text-6xl lg:text-8xl font-bold uppercase">
         Dewansh Thakur
       </h1>
-      <p className="text-lg tracking-widest uppercase dark:text-neutral-300 max-w-4xl">
+      <p className="text-lg tracking-widest uppercase dark:text-neutral-300 max-w-5xl">
         I&apos;m a Web Developer & Designer with a passion for creating
         innovative products. With over 4 years of experience, I&apos;ve built
         web apps and designed web pages for clients in US and India. My
@@ -19,7 +19,7 @@ const Hero = () => {
         DevOps, full-stack development, and system design, ensuring robust and
         well-rounded solutions for the market.
       </p>
-      <div className="flex my-16 gap-6">
+      <div className="flex my-16 gap-8">
         <Link
           className="font-semibold hover:shadow-highlight-red-300 dark:hover:shadow-highlight-red-500"
           href="/blog"
