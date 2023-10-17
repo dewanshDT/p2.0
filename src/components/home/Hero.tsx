@@ -1,11 +1,19 @@
 import Link from "next/link"
 import React from "react"
-import { ShuffleText } from ".."
 import { GoArrowUpRight } from "react-icons/go"
+import { twMerge } from "tailwind-merge"
 
-const Hero = () => {
+interface Props extends React.HtmlHTMLAttributes<HTMLDivElement> {}
+
+const Hero: React.FC<Props> = (props) => {
   return (
-    <div className="hero flex flex-col gap-4 w-full min-h-screen justify-center">
+    <div
+      {...props}
+      className={twMerge(
+        "hero flex flex-col gap-4 w-full min-h-screen justify-center",
+        props.className,
+      )}
+    >
       <h5 className="text-lg tracking-widest uppercase dark:text-neutral-300">
         Hello there, I&apos;m
       </h5>
@@ -32,14 +40,14 @@ const Hero = () => {
           href="/blog"
         >
           <span>Blogs</span>
-          <GoArrowUpRight className="text-xl" />
+          {/* <GoArrowUpRight className="text-xl" /> */}
         </Link>
         <Link
           className="px-4 py-2 gap-3 flex items-end border-red-500 border-2"
           target="_blank"
           href="https://2020.dewansh.space/"
         >
-          Archive 2020
+          Archive 2022
           <GoArrowUpRight className="text-xl" />
         </Link>
       </div>
