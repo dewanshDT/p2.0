@@ -2,6 +2,7 @@ import Link from "next/link"
 import React from "react"
 import { GoArrowUpRight } from "react-icons/go"
 import { twMerge } from "tailwind-merge"
+import { Button } from ".."
 
 interface Props extends React.HtmlHTMLAttributes<HTMLDivElement> {}
 
@@ -35,20 +36,12 @@ const Hero: React.FC<Props> = (props) => {
         Know more...
       </Link>
       <div className="flex my-16 gap-8">
-        <Link
-          className="px-4 py-2 gap-3 flex items-end border-red-500 border-2"
-          href="/blog"
-        >
-          <span>Blogs</span>
+        <Link href="/blog">
+          <Button>Blogs</Button>
           {/* <GoArrowUpRight className="text-xl" /> */}
         </Link>
-        <Link
-          className="px-4 py-2 gap-3 flex items-end border-red-500 border-2"
-          target="_blank"
-          href="https://2020.dewansh.space/"
-        >
-          Archive 2022
-          <GoArrowUpRight className="text-xl" />
+        <Link target="_blank" href="https://2020.dewansh.space/">
+          <Button arrow>Archive 2022</Button>
         </Link>
       </div>
     </div>
