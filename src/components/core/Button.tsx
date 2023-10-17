@@ -40,7 +40,6 @@ const Button: React.FC<Props> = (props) => {
   const manageMouseEnter = () => {
     if (timeoutId) clearTimeout(timeoutId)
     if (timeline.current) timeline.current.tweenFromTo("enter", "exit")
-    console.log("mouse entered")
   }
 
   const manageMouseLeave = () => {
