@@ -1,8 +1,5 @@
 "use client"
-
 import { Hero, Projects } from "@/components"
-import Lenis from "@studio-freight/lenis"
-import { useEffect } from "react"
 
 export default function Home() {
   return (
@@ -15,3 +12,5 @@ export default function Home() {
     </div>
   )
 }
+
+import React from "react"

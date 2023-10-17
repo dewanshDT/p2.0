@@ -65,7 +65,7 @@ const ProjectCard = ({
   link: string
 }) => {
   return (
-    <div className="sm:p-4 group w-full cursor-default border-dashed sm:border-2 border-transparent text-neutral-600 dark:text-neutral-400 sm:hover:bg-neutral-950">
+    <div className="sm:p-4 group w-full cursor-default border-dashed sm:border-2 border-transparent text-neutral-600 dark:text-neutral-400 dark:sm:hover:bg-neutral-950 sm:hover:bg-neutral-100">
       <div className="flex group-hover:text-red-500 text-neutral-700 dark:text-neutral-300 gap-4 items-center mb-2">
         <RiGitRepositoryFill className="text-2xl opacity-40" />
         <Link href={link} target="_blank" className="w-full">
