@@ -1,6 +1,7 @@
 import Link from "next/link"
 import React from "react"
 import { ShuffleText } from ".."
+import { GoArrowUpRight } from "react-icons/go"
 
 const Hero = () => {
   return (
@@ -27,17 +28,19 @@ const Hero = () => {
       </Link>
       <div className="flex my-16 gap-8">
         <Link
-          className="font-semibold hover:shadow-highlight-red-300 dark:hover:shadow-highlight-red-500"
+          className="px-4 py-2 gap-3 flex items-end border-red-500 border-2"
           href="/blog"
         >
-          Blogs
+          <span>Blogs</span>
+          <GoArrowUpRight className="text-xl" />
         </Link>
         <Link
-          className="font-semibold hover:shadow-highlight-red-300 dark:hover:shadow-highlight-red-500"
+          className="px-4 py-2 gap-3 flex items-end border-red-500 border-2"
           target="_blank"
           href="https://2020.dewansh.space/"
         >
           Archive 2020
+          <GoArrowUpRight className="text-xl" />
         </Link>
       </div>
     </div>
