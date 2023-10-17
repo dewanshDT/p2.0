@@ -31,7 +31,7 @@ const Button: React.FC<Props> = (props) => {
         )
         .to(
           button.current,
-          { top: "-200%", left: "10em", scale: 0.5, duration: 0.25 },
+          { top: "-10em", left: "10em", scale: 0.5, duration: 0.25 },
           "exit",
         )
     }
