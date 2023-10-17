@@ -55,21 +55,21 @@ const ProjectCard = ({
   link: string
 }) => {
   return (
-    <Link href={link} target="_blank" className="w-full">
-      <div className="sm:p-4 group w-full cursor-pointer border-dashed sm:border-2 border-transparent hover:border-red-500 text-neutral-600 dark:text-neutral-400 transition-colors">
-        <div className="flex group-hover:text-red-500 text-neutral-700 dark:text-neutral-300 gap-4 items-center mb-4 sm:mb-6">
-          <RiGitRepositoryFill className="text-2xl opacity-40" />
+    <div className="sm:p-4 group w-full cursor-default border-dashed sm:border-2 border-transparent hover:border-red-500 text-neutral-600 dark:text-neutral-400 transition-colors">
+      <div className="flex group-hover:text-red-500 text-neutral-700 dark:text-neutral-300 gap-4 items-center mb-4 sm:mb-6">
+        <RiGitRepositoryFill className="text-2xl opacity-40" />
+        <Link href={link} target="_blank" className="w-full">
           <h4 className="font-bold text-xl mr-auto">{title}</h4>
-          {gHLink && (
-            <Link href={gHLink} target="_blank">
-              <FaGithub className="text-2xl opacity-50" />
-            </Link>
-          )}
-          <GoArrowUpRight className="text-2xl text-red-500" />
-        </div>
-        <p className="font-medium text-sm sm:text-base">{description}</p>
+        </Link>
+        {gHLink && (
+          <Link href={gHLink} target="_blank">
+            <FaGithub className="text-2xl opacity-50" />
+          </Link>
+        )}
+        <GoArrowUpRight className="text-2xl text-red-500" />
       </div>
-    </Link>
+      <p className="font-medium text-sm sm:text-base">{description}</p>
+    </div>
   )
 }
 

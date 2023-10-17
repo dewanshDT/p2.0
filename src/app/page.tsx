@@ -1,15 +1,20 @@
-import { Hero, Projects } from "@/components"
-import { SITE_URL } from "@/lib/constants"
-import { Metadata } from "next"
-import Link from "next/link"
+"use client"
 
-export const metadata: Metadata = {
-  title: "Dewansh Thakur: Full Stack Developer & Designer",
-  description:
-    "I'm a Web Developer & Designer. I build web apps, and design web applications for my clients in US and India.",
-}
+import { Hero, Projects } from "@/components"
+import Lenis from "@studio-freight/lenis"
+import { useEffect } from "react"
 
 export default function Home() {
+  useEffect(() => {
+    const lenis = new Lenis()
+
+    function raf(time: any) {
+      lenis.raf(time)
+      requestAnimationFrame(raf)
+    }
+    requestAnimationFrame(raf)
+  })
+
   return (
     <div className="flex min-h-screen max-w-6xl w-full px-4 flex-col">
       <Hero />
