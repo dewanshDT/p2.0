@@ -6,8 +6,8 @@ import gsap from "gsap"
 import React, { useEffect, useRef, useState } from "react"
 
 const followerVariants: Variants = {
-  going: { borderRadius: "12px", borderWidth: "4px" },
-  static: { borderRadius: "1px", borderWidth: "2px" },
+  going: { borderRadius: "12px", borderWidth: "4px", rotate: 360 },
+  static: { borderRadius: "1px", borderWidth: "2px", rotate: 0 },
 }
 
 const Cursor = () => {
@@ -56,7 +56,11 @@ const Cursor = () => {
       ></div>
       <motion.div
         transition={{ duration: 0.75, ease: [0.22, 1, 0.36, 1] }}
-        initial={{ borderRadius: "1px" }}
+        initial={{
+          borderRadius: "1px",
+          translateX: "-50%",
+          translateY: "-50%",
+        }}
         variants={followerVariants}
         animate={moving ? "going" : "static"}
         ref={follower}
