@@ -1,9 +1,14 @@
 "use client"
 
-import { motion } from "framer-motion"
+import { Variants, motion } from "framer-motion"
 import clsx from "clsx"
 import gsap from "gsap"
 import React, { useEffect, useRef, useState } from "react"
+
+const followerVariants: Variants = {
+  going: { borderRadius: "12px", borderWidth: "4px" },
+  static: { borderRadius: "1px", borderWidth: "2px" },
+}
 
 const Cursor = () => {
   const cursor = useRef<HTMLDivElement>(null)
@@ -52,10 +57,7 @@ const Cursor = () => {
       <motion.div
         transition={{ duration: 0.75, ease: [0.22, 1, 0.36, 1] }}
         initial={{ borderRadius: "1px" }}
-        variants={{
-          going: { borderRadius: "12px" },
-          static: { borderRadius: "1px" },
-        }}
+        variants={followerVariants}
         animate={moving ? "going" : "static"}
         ref={follower}
         className={clsx(
