@@ -8,7 +8,7 @@ const Cursor = () => {
   const cursor = useRef<HTMLDivElement>(null)
   const follower = useRef<HTMLDivElement>(null)
   const [moving, setMoving] = useState(false)
-  const timeOut = useRef<NodeJS.Timeout>(null)
+  const timeOut = useRef<NodeJS.Timeout | null>(null)
 
   useEffect(() => {
     const cursorX = gsap.quickTo(cursor.current, "left", { duration: 0.01 })
