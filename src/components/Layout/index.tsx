@@ -4,6 +4,7 @@ import React, { useEffect, useRef } from "react"
 import Header from "./Header"
 import Footer from "./Footer"
 import Lenis from "@studio-freight/lenis"
+import Cursor from "../core/Cursor"
 
 interface Props {
   children?: React.ReactNode
@@ -38,6 +39,7 @@ const Layout: React.FC<Props> = ({ children }) => {
         </main>
         <Footer />
       </div>
+      <Cursor />
     </div>
   )
 }

@@ -12,6 +12,7 @@ body {
   transition:
     color 50ms ease,
     background-color 200ms ease;
+  cursor: none !important;
 }
 
 @media (hover: hover) and (pointer: fine) {

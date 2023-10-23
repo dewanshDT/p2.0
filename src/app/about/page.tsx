@@ -47,7 +47,7 @@ const about = () => {
                 target="_blank"
                 aria-label="click to email Dewansh"
               >
-                <div className="p-2 text-neutral-800 dark:text-neutral-200 dark:bg-neutral-800 bg-neutral-300  cursor-pointer">
+                <div className="p-2 text-neutral-800 dark:text-neutral-200 dark:bg-neutral-800 bg-neutral-300">
                   <AiOutlineMail />
                 </div>
               </Link>
@@ -57,7 +57,7 @@ const about = () => {
                 target="_blank"
                 aria-label="Dewansh's GitHub"
               >
-                <div className="p-2 text-neutral-800 dark:text-neutral-200 dark:bg-neutral-800 bg-neutral-300  cursor-pointer">
+                <div className="p-2 text-neutral-800 dark:text-neutral-200 dark:bg-neutral-800 bg-neutral-300">
                   <FaGithub />
                 </div>
               </Link>
@@ -66,7 +66,7 @@ const about = () => {
                 target="_blank"
                 aria-label="Dewansh's twitter handle"
               >
-                <div className="p-2 text-neutral-800 dark:text-neutral-200 dark:bg-neutral-800 bg-neutral-300  cursor-pointer">
+                <div className="p-2 text-neutral-800 dark:text-neutral-200 dark:bg-neutral-800 bg-neutral-300">
                   <FaXTwitter />
                 </div>
               </Link>
@@ -75,7 +75,7 @@ const about = () => {
                 target="_blank"
                 aria-label="Dewansh's linkedIn profile"
               >
-                <div className="p-2 text-neutral-800 dark:text-neutral-200 dark:bg-neutral-800 bg-neutral-300  cursor-pointer">
+                <div className="p-2 text-neutral-800 dark:text-neutral-200 dark:bg-neutral-800 bg-neutral-300">
                   <FaLinkedinIn />
                 </div>
               </Link>
@@ -84,7 +84,7 @@ const about = () => {
                 target="_blank"
                 aria-label="Dewansh's Instagram profile"
               >
-                <div className="p-2 text-neutral-800 dark:text-neutral-200 dark:bg-neutral-800 bg-neutral-300  cursor-pointer">
+                <div className="p-2 text-neutral-800 dark:text-neutral-200 dark:bg-neutral-800 bg-neutral-300">
                   <FaInstagram />
                 </div>
               </Link>
