@@ -1,5 +1,6 @@
 "use client"
 
+import { motion } from "framer-motion"
 import clsx from "clsx"
 import gsap from "gsap"
 import React, { useEffect, useRef, useState } from "react"
@@ -26,22 +27,6 @@ const Cursor = () => {
 
       setMoving(true)
 
-      //   // Calculate the distance between cursor and follower
-      //   if (cursor.current && follower.current) {
-      //     const distance = Math.sqrt(
-      //       Math.pow(cursor.current.offsetLeft - follower.current.offsetLeft, 2) +
-      //         Math.pow(cursor.current.offsetTop - follower.current.offsetTop, 2),
-      //     )
-
-      //     // If the distance is greater than a threshold, apply the circular border
-      //     if (distance > 10) {
-      //       setMoving(true)
-      //     } else {
-      //       // Otherwise, remove the circular border class
-      //       setMoving(false)
-      //     }
-      //   }
-
       if (timeOut.current) {
         clearTimeout(timeOut.current)
       }
@@ -64,14 +49,20 @@ const Cursor = () => {
         ref={cursor}
         className="pointer-events-none z-[1000] -translate-x-1/2 -translate-y-1/2 aspect-square mix-blend-difference bg-white h-1 absolute"
       ></div>
-      <div
+      <motion.div
+        transition={{ duration: 0.75, ease: [0.22, 1, 0.36, 1] }}
+        initial={{ borderRadius: "1px" }}
+        variants={{
+          going: { borderRadius: "12px" },
+          static: { borderRadius: "1px" },
+        }}
+        animate={moving ? "going" : "static"}
         ref={follower}
         className={clsx(
           "follower",
-          "pointer-events-none z-[1000] -translate-x-1/2 -translate-y-1/2 aspect-square mix-blend-difference border-red-500 border-2 h-4 absolute",
-          { "rounded-full": moving },
+          "pointer-events-none z-[1000] -translate-x-1/2 -translate-y-1/2 aspect-square mix-blend-difference border-red-500 border-2 h-6 absolute",
         )}
-      ></div>
+      ></motion.div>
     </>
   )
 }
