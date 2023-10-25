@@ -22,11 +22,11 @@ const Hero: React.FC<Props> = (props) => {
         Dewansh Thakur
       </h1>
       <p className="text-lg tracking-widest uppercase dark:text-neutral-300 max-w-5xl">
-        I&apos;m a Web Developer & Designer with a passion for creating
-        innovative products. With over 4 years of experience, I&apos;ve built
-        web apps and designed web pages for clients in US and India. My
-        expertise extends beyond UI design and web development, as I excel in
-        DevOps, full-stack development, and system design, ensuring robust and
+        I&apos;m a Web Developer & open source contributor with a passion for
+        creating innovative products. With over 4 years of experience, I&apos;ve
+        built web apps and designed web pages for clients in US and India. My
+        expertise extends beyond UI design and Full Stack development, as
+        I&apos;m also learning DevOps, and system design, ensuring robust and
         well-rounded solutions for the market.
       </p>
       <Link
