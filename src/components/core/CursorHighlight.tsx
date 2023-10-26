@@ -30,6 +30,9 @@ const CursorHighlight: React.FC<Props> = (props) => {
       onMouseLeave={() => {
         manageMouseLeave()
       }}
+      onClick={() => {
+        manageMouseLeave()
+      }}
       ref={container}
     >
       {props.children}

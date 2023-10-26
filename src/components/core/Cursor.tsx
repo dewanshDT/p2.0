@@ -67,7 +67,10 @@ const Cursor = () => {
       <div
         id="cursor"
         ref={cursor}
-        className="pointer-events-none z-[1000] -translate-x-1/2 -translate-y-1/2 aspect-square mix-blend-difference bg-white h-1 absolute"
+        className={clsx(
+          "pointer-events-none z-[1000] -translate-x-1/2 -translate-y-1/2 aspect-square mix-blend-difference bg-white h-1 absolute",
+          { "opacity-0 h-0": followerDimensions },
+        )}
       ></div>
       <motion.div
         transition={{ duration: 0.75, ease: [0.22, 1, 0.36, 1] }}

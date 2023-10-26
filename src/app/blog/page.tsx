@@ -1,4 +1,5 @@
 import BlogCard from "@/components/blog/BlogCard"
+import CursorHighlight from "@/components/core/CursorHighlight"
 import { allBlogPosts } from "contentlayer/generated"
 import { Metadata } from "next"
 import React from "react"
@@ -26,7 +27,9 @@ const page = () => {
             className="w-full my-4 flex flex-col items-center"
             key={blog.slugAsParams}
           >
-            <BlogCard blog={blog} />
+            <CursorHighlight>
+              <BlogCard blog={blog} />
+            </CursorHighlight>
           </div>
         ))}
       </div>
