@@ -65,6 +65,7 @@ const Cursor = () => {
   return (
     <>
       <div
+        id="cursor"
         ref={cursor}
         className="pointer-events-none z-[1000] -translate-x-1/2 -translate-y-1/2 aspect-square mix-blend-difference bg-white h-1 absolute"
       ></div>
@@ -85,8 +86,9 @@ const Cursor = () => {
         }}
         animate={followerDimensions ? "active" : moving ? "going" : "static"}
         ref={follower}
+        id="follower"
         className={clsx(
-          "follower absolute",
+          "absolute",
           "pointer-events-none z-[1000] -translate-x-1/2 -translate-y-1/2 aspect-square mix-blend-difference dark:border-red-500 border-[#10bbbb] border-2 h-6",
         )}
       ></motion.div>

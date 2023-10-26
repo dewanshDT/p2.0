@@ -5,6 +5,7 @@ import Header from "./Header"
 import Footer from "./Footer"
 import Lenis from "@studio-freight/lenis"
 import Cursor from "../core/Cursor"
+import CursorProvider from "@/context/cursor/CursorProvider"
 
 interface Props {
   children?: React.ReactNode
@@ -27,20 +28,22 @@ const Layout: React.FC<Props> = ({ children }) => {
   })
 
   return (
-    <div
-      ref={container}
-      id="main-scroll"
-      className="h-screen w-screen overflow-hidden overflow-y-auto"
-    >
-      <Header />
-      <div className="h-full pt-14" ref={content}>
-        <main className="overflow-x-hidden flex flex-col items-center min-h-screen">
-          {children}
-        </main>
-        <Footer />
+    <CursorProvider>
+      <div
+        ref={container}
+        id="main-scroll"
+        className="h-screen w-screen overflow-hidden overflow-y-auto"
+      >
+        <Header />
+        <div className="h-full pt-14" ref={content}>
+          <main className="overflow-x-hidden flex flex-col items-center min-h-screen">
+            {children}
+          </main>
+          <Footer />
+        </div>
+        <Cursor />
       </div>
-      <Cursor />
-    </div>
+    </CursorProvider>
   )
 }
 

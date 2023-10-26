@@ -3,6 +3,7 @@ import React from "react"
 import { GoArrowUpRight } from "react-icons/go"
 import { twMerge } from "tailwind-merge"
 import { Button } from ".."
+import CursorHighlight from "../core/CursorHighlight"
 
 interface Props extends React.HtmlHTMLAttributes<HTMLDivElement> {}
 
@@ -29,12 +30,11 @@ const Hero: React.FC<Props> = (props) => {
         DevOps, and system design, ensuring robust and well-rounded solutions
         for the market.
       </p>
-      <Link
-        className="font-medium hover:shadow-highlight-red-300 dark:hover:shadow-highlight-red-500 w-max"
-        href="/about"
-      >
-        Know more...
-      </Link>
+      <CursorHighlight className="w-max">
+        <Link className="font-medium" href="/about">
+          Know more...
+        </Link>
+      </CursorHighlight>
       <div className="flex my-16 gap-8">
         <Link href="/blog">
           <Button>Blogs</Button>

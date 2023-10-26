@@ -26,7 +26,9 @@ const CursorProvider: React.FC<Props> = ({ children }) => {
   return (
     <CursorContext.Provider
       value={{ followerDimensions, setFollowerDimensions }}
-    ></CursorContext.Provider>
+    >
+      {children}
+    </CursorContext.Provider>
   )
 }
 

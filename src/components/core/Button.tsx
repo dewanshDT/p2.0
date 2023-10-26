@@ -4,7 +4,6 @@ import { useEffect, useRef } from "react"
 import gsap from "gsap"
 import { twMerge } from "tailwind-merge"
 import { GoArrowUpRight } from "react-icons/go"
-import { useCursor } from "@/context/cursor/CursorProvider"
 
 interface Props extends React.HTMLAttributes<HTMLButtonElement> {
   arrow?: boolean
@@ -15,8 +14,6 @@ const Button: React.FC<Props> = (props) => {
   const buttonHighlight = useRef(null)
   let timeline = useRef<GSAPTimeline>()
   let timeoutId: any = null
-
-  const { setFollowerDimensions } = useCursor()
 
   useEffect(() => {
     if (!timeline.current) {
@@ -44,19 +41,12 @@ const Button: React.FC<Props> = (props) => {
   const manageMouseEnter = () => {
     if (timeoutId) clearTimeout(timeoutId)
     if (timeline.current) timeline.current.tweenFromTo("enter", "exit")
-
-    setFollowerDimensions({
-      height: button.current?.offsetHeight,
-      width: button.current?.offsetWidth,
-    })
   }
 
   const manageMouseLeave = () => {
     timeoutId = setTimeout(() => {
       if (timeline.current) timeline.current.play()
     }, 300)
-
-    setFollowerDimensions(undefined)
   }
 
   return (

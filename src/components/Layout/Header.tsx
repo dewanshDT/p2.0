@@ -3,6 +3,7 @@
 import { useTheme } from "@/hooks"
 import Link from "next/link"
 import { FaMoon, FaSun } from "react-icons/fa"
+import CursorHighlight from "../core/CursorHighlight"
 
 const Header = () => {
   const { toggleTheme, theme } = useTheme()
@@ -15,15 +16,21 @@ const Header = () => {
           </div>
         </Link>
         <div className="flex items-center text-sm gap-4">
-          <Link href="/blog">Blog</Link>
-          <Link href="/about">About</Link>
-          <button
-            aria-label="theme toggle"
-            className="text-neutral-600 dark:text-neutral-200 text-lg sm:text-xl"
-            onClick={() => toggleTheme()}
-          >
-            {theme === "dark" ? <FaSun /> : <FaMoon />}
-          </button>
+          <CursorHighlight>
+            <Link href="/blog">Blog</Link>
+          </CursorHighlight>
+          <CursorHighlight>
+            <Link href="/about">About</Link>
+          </CursorHighlight>
+          <CursorHighlight className="flex items-center">
+            <button
+              aria-label="theme toggle"
+              className="text-neutral-600 dark:text-neutral-200 text-lg sm:text-xl"
+              onClick={() => toggleTheme()}
+            >
+              {theme === "dark" ? <FaSun /> : <FaMoon />}
+            </button>
+          </CursorHighlight>
         </div>
       </div>
     </header>
