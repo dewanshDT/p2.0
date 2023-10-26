@@ -1,5 +1,11 @@
-"use client"
 import { Hero, Projects } from "@/components"
+import { Metadata } from "next"
+
+export const metadata: Metadata = {
+  title: "Dewansh Thakur: Full Stack Developer",
+  description:
+    "I'm a Web Developer & open source contributor with a passion for creating innovative products. With over 4 years of experience, I've contributed to projects like Processing Foundation. My expertise extends beyond UI design and Full Stack development, as I'm also learning DevOps, and system design, ensuring robust and well-rounded solutions for the market.",
+}
 
 export default function Home() {
   return (

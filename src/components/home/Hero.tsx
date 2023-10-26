@@ -24,10 +24,10 @@ const Hero: React.FC<Props> = (props) => {
       <p className="text-lg tracking-widest uppercase dark:text-neutral-300 max-w-5xl">
         I&apos;m a Web Developer & open source contributor with a passion for
         creating innovative products. With over 4 years of experience, I&apos;ve
-        built web apps and designed web pages for clients in US and India. My
-        expertise extends beyond UI design and Full Stack development, as
-        I&apos;m also learning DevOps, and system design, ensuring robust and
-        well-rounded solutions for the market.
+        contributed to projects like Processing Foundation. My expertise extends
+        beyond UI design and Full Stack development, as I&apos;m also learning
+        DevOps, and system design, ensuring robust and well-rounded solutions
+        for the market.
       </p>
       <Link
         className="font-medium hover:shadow-highlight-red-300 dark:hover:shadow-highlight-red-500 w-max"
