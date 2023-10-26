@@ -62,7 +62,7 @@ const components = {
   a: (props: any) => (
     <a
       className={twMerge(
-        "font-medium underline underline-offset-2",
+        "font-medium underline underline-offset-2 hover:text-red-500",
         props.className,
       )}
       {...props}
