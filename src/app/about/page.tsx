@@ -9,6 +9,8 @@ import { FaGithub, FaInstagram, FaLinkedinIn } from "react-icons/fa"
 import { AiOutlineMail } from "react-icons/ai"
 
 import me from "../../../public/me.jpg"
+import CursorHighlight from "@/components/core/CursorHighlight"
+import { GoArrowUpRight } from "react-icons/go"
 
 export const metadata: Metadata = {
   title: "About: Dewansh",
@@ -41,54 +43,71 @@ const about = () => {
               contributing to open source technologies.
             </p>
             <div className="mt-6 flex gap-2">
-              {/* Mail */}
-              <Link
-                href="mailto:dewansh.dt@gmail.com"
-                target="_blank"
-                aria-label="click to email Dewansh"
-              >
-                <div className="p-2 text-neutral-800 dark:text-neutral-200 dark:bg-neutral-800 bg-neutral-300">
-                  <AiOutlineMail />
-                </div>
-              </Link>
-              {/* GitHub */}
-              <Link
-                href="https://github.com/dewanshDT"
-                target="_blank"
-                aria-label="Dewansh's GitHub"
-              >
-                <div className="p-2 text-neutral-800 dark:text-neutral-200 dark:bg-neutral-800 bg-neutral-300">
-                  <FaGithub />
-                </div>
-              </Link>
-              <Link
-                href={AUTHOR_TWITTER_HANDLE}
-                target="_blank"
-                aria-label="Dewansh's twitter handle"
-              >
-                <div className="p-2 text-neutral-800 dark:text-neutral-200 dark:bg-neutral-800 bg-neutral-300">
-                  <FaXTwitter />
-                </div>
-              </Link>
-              <Link
-                href="https://www.linkedin.com/in/dewanshthakur/"
-                target="_blank"
-                aria-label="Dewansh's linkedIn profile"
-              >
-                <div className="p-2 text-neutral-800 dark:text-neutral-200 dark:bg-neutral-800 bg-neutral-300">
-                  <FaLinkedinIn />
-                </div>
-              </Link>
-              <Link
-                href="https://www.instagram.com/dewanshthakur_/"
-                target="_blank"
-                aria-label="Dewansh's Instagram profile"
-              >
-                <div className="p-2 text-neutral-800 dark:text-neutral-200 dark:bg-neutral-800 bg-neutral-300">
-                  <FaInstagram />
-                </div>
-              </Link>
+              <CursorHighlight>
+                <Link
+                  href="mailto:dewansh.dt@gmail.com"
+                  target="_blank"
+                  aria-label="click to email Dewansh"
+                >
+                  <div className="p-2 text-neutral-800 dark:text-neutral-200 dark:bg-neutral-800 bg-neutral-300">
+                    <AiOutlineMail />
+                  </div>
+                </Link>
+              </CursorHighlight>
+              <CursorHighlight>
+                <Link
+                  href="https://github.com/dewanshDT"
+                  target="_blank"
+                  aria-label="Dewansh's GitHub"
+                >
+                  <div className="p-2 text-neutral-800 dark:text-neutral-200 dark:bg-neutral-800 bg-neutral-300">
+                    <FaGithub />
+                  </div>
+                </Link>
+              </CursorHighlight>
+              <CursorHighlight>
+                <Link
+                  href={AUTHOR_TWITTER_HANDLE}
+                  target="_blank"
+                  aria-label="Dewansh's twitter handle"
+                >
+                  <div className="p-2 text-neutral-800 dark:text-neutral-200 dark:bg-neutral-800 bg-neutral-300">
+                    <FaXTwitter />
+                  </div>
+                </Link>
+              </CursorHighlight>
+              <CursorHighlight>
+                <Link
+                  href="https://www.linkedin.com/in/dewanshthakur/"
+                  target="_blank"
+                  aria-label="Dewansh's linkedIn profile"
+                >
+                  <div className="p-2 text-neutral-800 dark:text-neutral-200 dark:bg-neutral-800 bg-neutral-300">
+                    <FaLinkedinIn />
+                  </div>
+                </Link>
+              </CursorHighlight>
+              <CursorHighlight>
+                <Link
+                  href="https://www.instagram.com/dewanshthakur_/"
+                  target="_blank"
+                  aria-label="Dewansh's Instagram profile"
+                >
+                  <div className="p-2 text-neutral-800 dark:text-neutral-200 dark:bg-neutral-800 bg-neutral-300">
+                    <FaInstagram />
+                  </div>
+                </Link>
+              </CursorHighlight>
             </div>
+            <CursorHighlight className="w-max font-semibold mt-4">
+              <Link
+                href="resume.pdf"
+                target="_blank"
+                className="flex items-end gap-1"
+              >
+                <span>Résumé</span>
+              </Link>
+            </CursorHighlight>
           </div>
         </div>
       </div>
