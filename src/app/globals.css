@@ -5,6 +5,7 @@
 html,
 body {
   height: 100vh;
+  width: 100vw;
   overflow: hidden;
 }
 
@@ -27,6 +28,10 @@ body {
 
   * {
     cursor: none !important;
+  }
+
+  header {
+    padding-right: 10px;
   }
 
   #main-scroll::-webkit-scrollbar {

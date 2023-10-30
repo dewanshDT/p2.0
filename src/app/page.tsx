@@ -1,4 +1,4 @@
-import { Hero, Projects } from "@/components"
+import { Hero, Projects, Sticky } from "@/components"
 import { Metadata } from "next"
 
 export const metadata: Metadata = {

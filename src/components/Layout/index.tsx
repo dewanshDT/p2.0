@@ -14,6 +14,7 @@ interface Props {
 const Layout: React.FC<Props> = ({ children }) => {
   const container = useRef(null)
   const content = useRef(null)
+
   useEffect(() => {
     const lenis = new Lenis({
       wrapper: container.current ?? undefined,
@@ -36,7 +37,7 @@ const Layout: React.FC<Props> = ({ children }) => {
       >
         <Header />
         <div className="h-full pt-14" ref={content}>
-          <main className="overflow-x-hidden flex flex-col items-center min-h-screen">
+          <main className="flex flex-col items-center min-h-screen">
             {children}
           </main>
           <Footer />
