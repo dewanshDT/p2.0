@@ -48,7 +48,7 @@ const Projects: React.FC<Props> = (props) => {
         props.className,
       )}
     >
-      <h2 className="text-6xl font-semibold uppercase">Projects.</h2>
+      <h2 className="text-6xl font-bold uppercase">Projects.</h2>
       <ul className="mt-10 sm:mt-24 flex flex-col gap-10 sm:gap-16">
         {projects.map((project) => (
           <li key={project.title}>
