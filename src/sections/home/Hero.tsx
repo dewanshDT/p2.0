@@ -1,9 +1,7 @@
 import Link from "next/link"
 import React from "react"
-import { GoArrowUpRight } from "react-icons/go"
 import { twMerge } from "tailwind-merge"
-import { Button } from ".."
-import CursorHighlight from "../core/CursorHighlight"
+import { Button, CursorHighlight } from "../../components"
 
 interface Props extends React.HtmlHTMLAttributes<HTMLDivElement> {}
 

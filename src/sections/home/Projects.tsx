@@ -1,6 +1,6 @@
 import Link from "next/link"
 import React from "react"
-import { FaFolder, FaGithub, FaRegFolder } from "react-icons/fa"
+import { FaGithub } from "react-icons/fa"
 import { GoArrowUpRight } from "react-icons/go"
 import { RiGitRepositoryFill } from "react-icons/ri"
 import { twMerge } from "tailwind-merge"
