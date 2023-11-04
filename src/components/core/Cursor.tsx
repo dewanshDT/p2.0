@@ -15,7 +15,7 @@ const Cursor = () => {
   const [mouseDown, setMouseDown] = useState(false)
   const timeOut = useRef<NodeJS.Timeout | null>(null)
 
-  const { followerDimensions } = useCursor()
+  const { followerDimensions, setCursorPosition } = useCursor()
 
   const mouse = {
     x: useMotionValue(0),
@@ -29,38 +29,38 @@ const Cursor = () => {
     y: mouse.y,
   }
 
+  const handleMouseMove = (eve: MouseEvent) => {
+    setMoving(true)
+
+    const { clientX, clientY } = eve
+    mouse.x.set(clientX)
+    mouse.y.set(clientY)
+
+    setCursorPosition({ x: clientX, y: clientY })
+
+    if (timeOut.current) {
+      clearTimeout(timeOut.current)
+    }
+
+    timeOut.current = setTimeout(() => {
+      setMoving(false)
+    }, 100)
+  }
+
+  const handleMouseDown = (eve: MouseEvent) => {
+    setMouseDown(true)
+  }
+
+  const handleMouseUp = (eve: MouseEvent) => {
+    setMouseDown(false)
+  }
+
   useEffect(() => {
-    const handleMouseMove = (eve: MouseEvent) => {
-      setMoving(true)
-
-      const { clientX, clientY } = eve
-      mouse.x.set(clientX)
-      mouse.y.set(clientY)
-
-      if (timeOut.current) {
-        clearTimeout(timeOut.current)
-      }
-
-      timeOut.current = setTimeout(() => {
-        setMoving(false)
-      }, 100)
-    }
-
-    const handleMouseDown = (eve: MouseEvent) => {
-      // gsap.to(cursor.current, { height: "10px", width: "10px", duration: 0.2 })
-      setMouseDown(true)
-    }
-
-    const handleMouseUp = (eve: MouseEvent) => {
-      // gsap.to(cursor.current, { height: "4px", width: "4px", duration: 0.2 })
-      setMouseDown(false)
-    }
-
-    // Cleanup the event listener when the component unmounts
     window?.addEventListener("mousemove", handleMouseMove)
     window?.addEventListener("mousedown", handleMouseDown)
     window?.addEventListener("mouseup", handleMouseUp)
 
+    // Cleanup the event listener when the component unmounts
     return () => {
       window?.removeEventListener("mousemove", handleMouseMove)
       window?.removeEventListener("mouseup", handleMouseUp)
