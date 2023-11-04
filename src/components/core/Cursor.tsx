@@ -29,6 +29,11 @@ const Cursor = () => {
     y: mouse.y,
   }
 
+  const followerPosition = {
+    x: useSpring(smoothMouse.x, smoothOptions),
+    y: useSpring(smoothMouse.y, smoothOptions),
+  }
+
   const handleMouseMove = (eve: MouseEvent) => {
     setMoving(true)
 
@@ -87,8 +92,8 @@ const Cursor = () => {
       ></motion.div>
       <motion.div
         style={{
-          left: useSpring(smoothMouse.x, smoothOptions),
-          top: useSpring(smoothMouse.y, smoothOptions),
+          left: followerPosition.x,
+          top: followerPosition.y,
         }}
         transition={{ duration: 0.75, ease: [0.22, 1, 0.36, 1] }}
         initial={{

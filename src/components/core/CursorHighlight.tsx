@@ -10,12 +10,12 @@ const CursorHighlight: React.FC<Props> = (props) => {
   const container = useRef<HTMLDivElement | null>(null)
 
   const manageMouseEnter = () => {
-    if (container.current)
+    if (container.current) {
       setFollowerDimensions({
         height: container.current.offsetHeight + 12,
         width: container.current?.offsetWidth + 12,
       })
-    console.log("mouse enter")
+    }
   }
 
   const manageMouseLeave = () => {
