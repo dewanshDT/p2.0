@@ -74,8 +74,12 @@ const ProjectCard = ({
   return (
     <div className="flex flex-col gap-4">
       <div className="info flex flex-col gap-2">
-        <h5 className="text-xl">{title}</h5>
-        <p className="dark:text-neutral-300 tracking-widest">{description}</p>
+        <h5 className="text-xl font-medium flex items-center gap-2">
+          <span>{title}</span>
+        </h5>
+        <p className="dark:text-neutral-300 text-sm sm:text-base tracking-widest">
+          {description}
+        </p>
         <div className="mt-4 flex gap-4 items-center text-2xl dark:text-neutral-300">
           <CursorHighlight>
             <Link href={gHLink} target="_blank">

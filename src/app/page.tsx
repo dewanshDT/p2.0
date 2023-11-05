@@ -1,3 +1,4 @@
+import { Loader, ProgressBar } from "@/components"
 import { Hero, Projects, Sticky } from "@/sections"
 import { Metadata } from "next"
 
@@ -13,8 +14,9 @@ export default function Home() {
       <Hero />
       <Projects className="my-16 sm:my-28" />
       <span className="text-neutral-400">
-        &#47;&#47; work in progress, check back often!
+        &#47;&#47; This is work in progress, please check back often!
       </span>
+      <Loader />
     </div>
   )
 }

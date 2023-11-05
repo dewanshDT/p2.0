@@ -10,6 +10,11 @@ const cursorVariants: Variants = {
   up: { height: 4, width: 4 },
 }
 
+const followerVariants: Variants = {
+  going: { borderRadius: "12px", borderWidth: "4px", rotate: 360 },
+  static: { borderRadius: "1px", borderWidth: "2px", rotate: 0 },
+}
+
 const Cursor = () => {
   const [moving, setMoving] = useState(false)
   const [mouseDown, setMouseDown] = useState(false)
@@ -18,20 +23,15 @@ const Cursor = () => {
   const { followerDimensions, setCursorPosition } = useCursor()
 
   const mouse = {
-    x: useMotionValue(0),
-    y: useMotionValue(0),
+    x: useMotionValue(-20),
+    y: useMotionValue(-20),
   }
 
   const smoothOptions = { damping: 15, stiffness: 150, mass: 0.4 }
 
-  const smoothMouse = {
-    x: mouse.x,
-    y: mouse.y,
-  }
-
   const followerPosition = {
-    x: useSpring(smoothMouse.x, smoothOptions),
-    y: useSpring(smoothMouse.y, smoothOptions),
+    x: useSpring(mouse.x, smoothOptions),
+    y: useSpring(mouse.y, smoothOptions),
   }
 
   const handleMouseMove = (eve: MouseEvent) => {
@@ -80,8 +80,8 @@ const Cursor = () => {
         // ref={cursor}
         transition={{ duration: 0.15 }}
         style={{
-          left: smoothMouse.x,
-          top: smoothMouse.y,
+          left: mouse.x,
+          top: mouse.y,
         }}
         variants={cursorVariants}
         animate={mouseDown ? "down" : "up"}
@@ -102,8 +102,7 @@ const Cursor = () => {
           translateY: "-50%",
         }}
         variants={{
-          going: { borderRadius: "12px", borderWidth: "4px", rotate: 360 },
-          static: { borderRadius: "1px", borderWidth: "2px", rotate: 0 },
+          ...followerVariants,
           active: {
             width: followerDimensions?.width,
             height: followerDimensions?.height,
@@ -113,8 +112,9 @@ const Cursor = () => {
         // ref={follower}
         id="follower"
         className={clsx(
-          "absolute",
-          "pointer-events-none z-[1000] -translate-x-1/2 -translate-y-1/2 aspect-square mix-blend-difference dark:border-red-500 border-[#10bbbb] border-2 h-6",
+          "z-[1000] absolute -translate-x-1/2 -translate-y-1/2",
+          "pointer-events-none  aspect-square mix-blend-difference dark:border-red-500 h-6",
+          "border-[#10bbbb] border-2",
         )}
       ></motion.div>
     </>
