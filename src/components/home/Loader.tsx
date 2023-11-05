@@ -29,11 +29,17 @@ const Loader = () => {
   return (
     <div
       className={clsx(
-        "absolute transition-transform duration-1000 delay-1000 p-6 h-screen top-0 left-0 w-screen bg-black z-10 flex flex-col items-center justify-center",
-        { "-translate-y-full": per >= 100 },
+        "absolute transition-opacity duration-1000 delay-[1500ms] p-6 h-screen top-0 left-0 w-screen bg-black z-10 flex flex-col items-center justify-center",
+        { "opacity-0 pointer-events-none": per >= 100 },
       )}
     >
-      <div className="flex flex-col w-full max-w-2xl">
+      <div
+        className={clsx(
+          "flex flex-col w-full max-w-2xl",
+          "transition-opacity duration-600 delay-1000",
+          { "opacity-0": per >= 100 },
+        )}
+      >
         <h5 className="text-sm sm:text-lg text-white font-light">{per}%</h5>
         <ProgressBar percentage={per} />
         <div className="flex flex-col gap-1 mt-4 text-sm text-[#10bbbb]">

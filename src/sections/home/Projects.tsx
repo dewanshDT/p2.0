@@ -74,7 +74,7 @@ const ProjectCard = ({
   return (
     <div className="flex flex-col gap-4">
       <div className="info flex flex-col gap-2">
-        <h5 className="text-xl font-medium flex items-center gap-2">
+        <h5 className="text-xl flex items-center gap-2">
           <span>{title}</span>
         </h5>
         <p className="dark:text-neutral-300 text-sm sm:text-base tracking-widest">
