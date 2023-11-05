@@ -34,15 +34,18 @@ const Loader = () => {
       )}
     >
       <div className="flex flex-col w-full max-w-2xl">
-        <h5 className="text-sm sm:text-lg text-red-500">{per}%</h5>
+        <h5 className="text-sm sm:text-lg text-white font-light">{per}%</h5>
         <ProgressBar percentage={per} />
         <div className="flex flex-col gap-1 mt-4 text-sm text-[#10bbbb]">
           <p style={{ opacity: per > 30 ? 1 : 0 }}>
-            Namaste, loading resources . . .
+            <span className="text-white">$</span> Namaste, loading resources . .
+            .
           </p>
-          <p style={{ opacity: per > 70 ? 1 : 0 }}>almost there</p>
-          <p style={{ opacity: per > 90 ? 1 : 0, color: "#f5d142" }}>
-            launching{" >>>>"}
+          <p style={{ opacity: per > 70 ? 1 : 0 }}>
+            <span className="text-white">$</span> almost there
+          </p>
+          <p style={{ opacity: per > 90 ? 1 : 0 }} className="text-red-500">
+            <span className="text-white">$</span> launching{" > > >"}
           </p>
         </div>
       </div>

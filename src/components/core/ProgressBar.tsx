@@ -24,7 +24,7 @@ const ProgressBar: React.FC<Props> = (props) => {
         <motion.div
           key={index}
           className="bg-white h-full w-1"
-          transition={{ duration: 0.75 }}
+          transition={{ duration: 0.75, ease: "easeOut" }}
           initial={{ backgroundColor: "#10bbbb" }} // Set initial opacity to 0
           animate={{ backgroundColor: "#ffffff" }} // Animate opacity to 1
         ></motion.div>

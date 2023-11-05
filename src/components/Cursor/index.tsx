@@ -11,7 +11,11 @@ const cursorVariants: Variants = {
 }
 
 const followerVariants: Variants = {
-  going: { borderRadius: "12px", borderWidth: "4px", rotate: 360 },
+  going: {
+    borderRadius: "12px",
+    borderWidth: "4px",
+    rotate: 80,
+  },
   static: { borderRadius: "1px", borderWidth: "2px", rotate: 0 },
 }
 

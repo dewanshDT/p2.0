@@ -49,7 +49,7 @@ const Projects: React.FC<Props> = (props) => {
       )}
     >
       <h2 className="text-6xl font-bold uppercase">Projects.</h2>
-      <ul className="mt-10 sm:mt-24 flex flex-col gap-10 sm:gap-16">
+      <ul className="mt-10 sm:mt-12 flex flex-col gap-10 sm:gap-14">
         {projects.map((project) => (
           <li key={project.title}>
             <ProjectCard {...project} />
