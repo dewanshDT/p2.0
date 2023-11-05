@@ -6,6 +6,7 @@ import Footer from "./Footer"
 import Lenis from "@studio-freight/lenis"
 import Cursor from "../Cursor"
 import CursorProvider from "@/context/cursor/CursorProvider"
+import { Loader } from ".."
 
 interface Props {
   children?: React.ReactNode
@@ -43,6 +44,7 @@ const Layout: React.FC<Props> = ({ children }) => {
           <Footer />
         </div>
         <Cursor />
+        <Loader />
       </div>
     </CursorProvider>
   )

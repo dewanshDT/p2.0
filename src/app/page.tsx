@@ -1,5 +1,4 @@
-import { Loader, ProgressBar } from "@/components"
-import { Hero, Projects, Sticky } from "@/sections"
+import { Hero, Projects } from "@/sections"
 import { Metadata } from "next"
 
 export const metadata: Metadata = {
@@ -16,7 +15,6 @@ export default function Home() {
       <span className="text-neutral-400">
         &#47;&#47; This is work in progress, please check back often!
       </span>
-      <Loader />
     </div>
   )
 }
