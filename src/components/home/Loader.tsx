@@ -41,6 +41,9 @@ const Loader = () => {
             Namaste, loading resources . . .
           </p>
           <p style={{ opacity: per > 70 ? 1 : 0 }}>almost there</p>
+          <p style={{ opacity: per > 90 ? 1 : 0, color: "#f5d142" }}>
+            launching{" >>>>"}
+          </p>
         </div>
       </div>
     </div>
