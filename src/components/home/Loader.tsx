@@ -46,7 +46,7 @@ const Loader = () => {
         <ProgressBar percentage={per} />
         <div className="flex flex-col gap-1 mt-4 text-sm text-[#10bbbb]">
           <p style={{ opacity: per > 30 ? 1 : 0 }}>
-            <span className="text-white">$</span> Namaste, loading resources . .
+            <span className="text-white">$</span> Namaste! loading resources . .
             .
           </p>
           <p style={{ opacity: per > 70 ? 1 : 0 }}>
