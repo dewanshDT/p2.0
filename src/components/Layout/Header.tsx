@@ -4,11 +4,20 @@ import { useTheme } from "@/hooks"
 import Link from "next/link"
 import { FaMoon, FaSun } from "react-icons/fa"
 import CursorHighlight from "../core/CursorHighlight"
+import clsx from "clsx"
 
 const Header = () => {
   const { toggleTheme, theme } = useTheme()
   return (
-    <header className="header w-full border-b-neutral-200 border-b dark:border-b-neutral-900 z-10 flex absolute top-0 flex-col items-center">
+    <header
+      className={clsx(
+        "header",
+        "sticky top-0 z-10",
+        "w-full",
+        "flex flex-col items-center",
+        "border-b dark:border-neutral-900 border-neutral-200",
+      )}
+    >
       <div className="max-w-6xl px-4 py-3 w-full flex justify-between items-center">
         <CursorHighlight>
           <Link href="/">

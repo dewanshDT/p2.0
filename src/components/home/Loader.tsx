@@ -23,13 +23,15 @@ const Loader = () => {
   useEffect(() => {
     if (per >= 100) {
       clearInterval(interval.current as NodeJS.Timeout)
+      window.scrollTo(0, 0)
     }
   }, [per])
 
   return (
     <div
       className={clsx(
-        "absolute transition-opacity duration-1000 delay-[1500ms] p-6 h-screen top-0 left-0 w-screen bg-black z-10 flex flex-col items-center justify-center",
+        "fixed h-screen top-0 left-0 w-screen",
+        "transition-opacity duration-1000 delay-[1500ms] p-6 bg-black z-10 flex flex-col items-center justify-center",
         { "opacity-0 pointer-events-none": per >= 100 },
       )}
     >

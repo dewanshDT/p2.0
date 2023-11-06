@@ -1,9 +1,6 @@
-"use client"
-
-import React, { useEffect, useRef } from "react"
+import React from "react"
 import Header from "./Header"
 import Footer from "./Footer"
-import Lenis from "@studio-freight/lenis"
 import Cursor from "../Cursor"
 import CursorProvider from "@/context/cursor/CursorProvider"
 import { Loader } from ".."
@@ -13,39 +10,15 @@ interface Props {
 }
 
 const Layout: React.FC<Props> = ({ children }) => {
-  const container = useRef(null)
-  const content = useRef(null)
-
-  useEffect(() => {
-    const lenis = new Lenis({
-      wrapper: container.current ?? undefined,
-      content: content.current ?? undefined,
-    })
-
-    function raf(time: any) {
-      lenis.raf(time)
-      requestAnimationFrame(raf)
-    }
-    requestAnimationFrame(raf)
-  })
-
   return (
     <CursorProvider>
-      <div
-        ref={container}
-        id="main-scroll"
-        className="h-screen w-screen overflow-hidden overflow-y-auto"
-      >
-        <Header />
-        <div className="h-full pt-14" ref={content}>
-          <main className="flex flex-col items-center min-h-screen">
-            {children}
-          </main>
-          <Footer />
-        </div>
-        <Cursor />
-        <Loader />
-      </div>
+      <Header />
+      <main className="flex flex-col items-center min-h-screen">
+        {children}
+      </main>
+      <Footer />
+      <Cursor />
+      <Loader />
     </CursorProvider>
   )
 }

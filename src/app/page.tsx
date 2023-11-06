@@ -1,3 +1,4 @@
+import { SmoothScroll } from "@/components"
 import { Hero, Projects } from "@/sections"
 import { Metadata } from "next"
 
@@ -15,6 +16,7 @@ export default function Home() {
       <span className="text-neutral-400">
         &#47;&#47; This is work in progress, please check back often!
       </span>
+      <SmoothScroll />
     </div>
   )
 }

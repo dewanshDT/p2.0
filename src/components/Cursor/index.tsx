@@ -78,10 +78,12 @@ const Cursor = () => {
   })
 
   return (
-    <>
+    <div
+      id="cursor-plane"
+      className="fixed pointer-events-none mix-blend-difference z-[1000] h-screen w-screen top-0 left-0 overflow-hidden"
+    >
       <motion.div
         id="cursor"
-        // ref={cursor}
         transition={{ duration: 0.15 }}
         style={{
           left: mouse.x,
@@ -90,7 +92,7 @@ const Cursor = () => {
         variants={cursorVariants}
         animate={mouseDown ? "down" : "up"}
         className={clsx(
-          "pointer-events-none z-[1000] -translate-x-1/2 -translate-y-1/2 aspect-square mix-blend-difference bg-white h-1 absolute",
+          "pointer-events-none  -translate-x-1/2 -translate-y-1/2 aspect-square mix-blend-difference bg-white h-1 absolute",
           { "opacity-0 h-0": followerDimensions },
         )}
       ></motion.div>
@@ -121,7 +123,7 @@ const Cursor = () => {
           "border-[#10bbbb] border-2",
         )}
       ></motion.div>
-    </>
+    </div>
   )
 }
 
