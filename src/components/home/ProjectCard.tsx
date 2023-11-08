@@ -5,6 +5,7 @@ import { CursorHighlight } from ".."
 import Link from "next/link"
 import { FiArrowUpRight } from "react-icons/fi"
 import Image, { StaticImageData } from "next/image"
+import { motion } from "framer-motion"
 
 interface Props {
   title: string
@@ -26,7 +27,11 @@ const ProjectCard: React.FC<Props> = ({
   tags,
 }) => {
   return (
-    <div className="flex flex-col w-full md:min-h-[60vh]">
+    <motion.div
+      initial={{ opacity: 0.5, translateY: 200 }}
+      whileInView={{ opacity: 1, translateY: 0 }}
+      className="flex flex-col w-full md:min-h-[60vh]"
+    >
       {/* header */}
       <div className="flex gap-4 w-full items-center">
         <div className="flex border border-red-500">
@@ -67,12 +72,17 @@ const ProjectCard: React.FC<Props> = ({
             </CursorHighlight>
           </div>
         </div>
-        <div className="hidden md:flex flex-col items-center justify-center md:ml-auto">
+        <motion.div
+          transition={{ delay: 0.2 }}
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          className="hidden md:flex flex-col items-center justify-center md:ml-auto"
+        >
           <Image alt={title} src={banner} height={520} />
-        </div>
+        </motion.div>
       </div>
       <div className="w-full mt-8 sm:border-b-8 border-dashed border-neutral-200 dark:border-neutral-900 max-w-xl ml-auto"></div>
-    </div>
+    </motion.div>
   )
 }
 
