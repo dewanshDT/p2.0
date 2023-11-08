@@ -3,7 +3,7 @@ import React, { RefObject } from "react"
 import { useEffect, useRef } from "react"
 import gsap from "gsap"
 import { twMerge } from "tailwind-merge"
-import { GoArrowUpRight } from "react-icons/go"
+import { FiArrowUpRight } from "react-icons/fi"
 
 interface Props extends React.HTMLAttributes<HTMLButtonElement> {
   arrow?: boolean
@@ -66,7 +66,7 @@ const Button: React.FC<Props> = (props) => {
     >
       {props.children}
       {props.arrow && (
-        <GoArrowUpRight className="text-xl group-hover:-translate-y-0.5 group-hover:scale-110 transition-transform" />
+        <FiArrowUpRight className="text-2xl group-hover:-translate-y-0.5 group-hover:scale-110 transition-transform" />
       )}
       <div
         ref={buttonHighlight}
