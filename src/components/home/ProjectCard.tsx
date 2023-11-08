@@ -38,7 +38,7 @@ const ProjectCard: React.FC<Props> = ({
             {title}
           </span>
         </div>
-        <CursorHighlight className="h-8 w-8 sm:h-10 sm:w-10 flex items-center justify-center border text-2xl sm:text-3xl bg-neutral-400 dark:bg-neutral-700 border-neutral-700 dark:text-black text-white">
+        <CursorHighlight className="h-8 w-8 sm:h-10 sm:w-10 flex items-center justify-center border text-2xl sm:text-3xl bg-neutral-400 dark:bg-neutral-700 border-neutral-400 dark:border-neutral-700 dark:text-black text-white">
           <Link href={link}>
             <FiArrowUpRight className="hover:-translate-y-0.5 group-hover:scale-110 transition-transform" />
           </Link>
@@ -72,7 +72,7 @@ const ProjectCard: React.FC<Props> = ({
           <Image alt={title} src={banner} height={520} />
         </div>
       </div>
-      <div className="w-full mt-8 sm:border-b-8 border-dotted border-neutral-300 dark:border-neutral-800 max-w-xl ml-auto"></div>
+      <div className="w-full mt-8 sm:border-b-8 border-dashed border-neutral-200 dark:border-neutral-900 max-w-xl ml-auto"></div>
     </div>
   )
 }

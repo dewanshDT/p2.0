@@ -4,6 +4,7 @@ import { twMerge } from "tailwind-merge"
 import editor from "../../../public/images/Editor.png"
 import trs from "../../../public/images/trs.png"
 import vidhaan from "../../../public/images/vidhaan.png"
+import gray from "../../../public/images/gray.png"
 
 interface Props extends React.HtmlHTMLAttributes<HTMLDivElement> {}
 
@@ -42,7 +43,7 @@ const projects = [
     tags: ["ui/ux", "react", "webpack", "styled components", "sass"],
     link: "https://marketplace.visualstudio.com/items?itemName=DEW.dew-grey",
     gHLink: "https://github.com/dewanshDT/DEW-GREY",
-    banner: editor,
+    banner: gray,
   },
 ]
 
