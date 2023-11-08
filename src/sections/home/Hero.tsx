@@ -33,7 +33,7 @@ const Hero: React.FC<Props> = (props) => {
           Know more...
         </Link>
       </CursorHighlight>
-      <div className="flex my-16 gap-8">
+      <div className="flex my-8 sm:my-16 gap-8">
         <Link href="/blog">
           <Button>Blogs</Button>
           {/* <GoArrowUpRight className="text-xl" /> */}
