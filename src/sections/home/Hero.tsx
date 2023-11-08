@@ -7,10 +7,10 @@ interface Props extends React.HtmlHTMLAttributes<HTMLDivElement> {}
 
 const Hero: React.FC<Props> = (props) => {
   return (
-    <div
+    <section
       {...props}
       className={twMerge(
-        "hero flex flex-col gap-4 w-full min-h-screen justify-center",
+        "hero flex flex-col gap-4 w-full min-h-screen sm:justify-center pt-16 sm:pt-0",
         props.className,
       )}
     >
@@ -42,7 +42,7 @@ const Hero: React.FC<Props> = (props) => {
           <Button arrow>Archive 2022</Button>
         </Link>
       </div>
-    </div>
+    </section>
   )
 }
 

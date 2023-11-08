@@ -10,14 +10,14 @@ export const metadata: Metadata = {
 
 export default function Home() {
   return (
-    <div className="flex flex-col min-h-screen w-full px-4 max-w-6xl">
+    <article className="flex flex-col min-h-screen w-full px-4 max-w-6xl">
       <Hero />
       <Projects className="my-16 sm:my-20" />
       <span className="text-neutral-400">
         &#47;&#47; This is work in progress, please check back often!
       </span>
       <SmoothScroll />
-    </div>
+    </article>
   )
 }
 
