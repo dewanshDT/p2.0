@@ -3,7 +3,6 @@
 import { FaGithub } from "react-icons/fa"
 import { CursorHighlight } from ".."
 import Link from "next/link"
-import { GoArrowUpRight } from "react-icons/go"
 import { FiArrowUpRight } from "react-icons/fi"
 import Image, { StaticImageData } from "next/image"
 

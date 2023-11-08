@@ -36,7 +36,6 @@ const Hero: React.FC<Props> = (props) => {
       <div className="flex my-8 sm:my-16 gap-8">
         <Link href="/blog">
           <Button>Blogs</Button>
-          {/* <GoArrowUpRight className="text-xl" /> */}
         </Link>
         <Link target="_blank" href="https://2020.dewansh.space/">
           <Button arrow>Archive 2022</Button>
