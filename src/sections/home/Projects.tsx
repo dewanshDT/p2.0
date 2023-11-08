@@ -13,7 +13,7 @@ const projects = [
     title: "p5.js-web-editor",
     description:
       "Made the editor useable across smaller devices like Tablets and Mobile phones by developing a complete new UI, making it more accessible and also improved performance and UX.",
-    tags: ["ui/ux", "react", "webpack", "styled components", "sass"],
+    tags: ["ui/ux", "react", "express", "webpack", "styled components", "sass"],
     link: "https://editor.p5js.org/",
     gHLink: "https://github.com/processing/p5.js-web-editor",
     banner: editor,
@@ -22,7 +22,17 @@ const projects = [
     title: "The Research School",
     description:
       "A complete AI powered platform for research scholars and Professors which includes features like AI Question bank, Live Webinars with transcripts and note taking  and many more.",
-    tags: ["ui/ux", "react", "webpack", "styled components", "sass"],
+    tags: [
+      "ui/ux",
+      "next.js",
+      "django",
+      "postgresql",
+      "aws",
+      "stripe",
+      "tailwind",
+      "typescript",
+      "open ai api",
+    ],
     link: "https://theresearchschool.com",
     gHLink: "https://github.com/Research-School",
     banner: trs,
@@ -31,7 +41,15 @@ const projects = [
     title: "Vidhaan",
     description:
       "AI based analytics dashboard for University Grants Commission's Lawyers to handle cases.",
-    tags: ["ui/ux", "react", "webpack", "styled components", "sass"],
+    tags: [
+      "ui/ux",
+      "next.js",
+      "django",
+      "d3",
+      "firebase",
+      "postgresql",
+      "typescript",
+    ],
     link: "https://vidhaanweb.vercel.app/",
     gHLink: "https://github.com/Vidhaan-org/vidhaanweb",
     banner: vidhaan,
@@ -40,7 +58,7 @@ const projects = [
     title: "Dew-Grey",
     description:
       "A minimal Visual Studio Code theme pack, (Published on marketplace).",
-    tags: ["ui/ux", "react", "webpack", "styled components", "sass"],
+    tags: ["ui/ux", "javascript", "personalization"],
     link: "https://marketplace.visualstudio.com/items?itemName=DEW.dew-grey",
     gHLink: "https://github.com/dewanshDT/DEW-GREY",
     banner: gray,
