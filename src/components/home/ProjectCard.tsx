@@ -61,7 +61,7 @@ const ProjectCard: React.FC<Props> = ({
           </span>
         </div>
         <CursorHighlight className="h-8 w-8 sm:h-10 sm:w-10 flex items-center justify-center border text-2xl sm:text-3xl bg-neutral-400 dark:bg-neutral-700 border-neutral-400 dark:border-neutral-700 dark:text-black text-white">
-          <Link href={link}>
+          <Link href={link} target="_blank">
             <FiArrowUpRight className="hover:-translate-y-0.5 group-hover:scale-110 transition-transform" />
           </Link>
         </CursorHighlight>
@@ -85,7 +85,7 @@ const ProjectCard: React.FC<Props> = ({
             </div>
             <div className="flex gap-4 text-neutral-400 dark:text-neutral-500">
               <CursorHighlight className="text-2xl p-1 w-max hover:text-red-500">
-                <Link href={gHLink}>
+                <Link href={gHLink} target="_blank">
                   <FaGithub />
                 </Link>
               </CursorHighlight>
