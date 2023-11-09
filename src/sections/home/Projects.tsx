@@ -13,7 +13,15 @@ const projects = [
     title: "p5.js-web-editor",
     description:
       "Made the editor useable across smaller devices like Tablets and Mobile phones by developing a complete new UI, making it more accessible and also improved performance and UX.",
-    tags: ["ui/ux", "react", "express", "webpack", "styled components", "sass"],
+    tags: [
+      "ui/ux",
+      "react",
+      "express",
+      "webpack",
+      "styled components",
+      "sass",
+      "testing",
+    ],
     link: "https://editor.p5js.org/",
     gHLink: "https://github.com/processing/p5.js-web-editor",
     apiUrl: "https://api.github.com/repos/processing/p5.js-web-editor",

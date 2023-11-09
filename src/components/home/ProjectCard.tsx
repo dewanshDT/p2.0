@@ -48,6 +48,7 @@ const ProjectCard: React.FC<Props> = ({
       transition={{ ease: "easeIn" }}
       initial={{ opacity: 0.5, translateY: 200 }}
       whileInView={{ opacity: 1, translateY: 0 }}
+      viewport={{ once: true }}
       className="flex flex-col w-full md:min-h-[60vh]"
     >
       {/* header */}
@@ -108,6 +109,7 @@ const ProjectCard: React.FC<Props> = ({
           transition={{ delay: 0.2 }}
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
           className="hidden md:flex flex-col items-center justify-center md:ml-auto"
         >
           <Image alt={title} src={banner} height={520} />
