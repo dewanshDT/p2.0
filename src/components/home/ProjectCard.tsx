@@ -110,7 +110,6 @@ const ProjectCard: React.FC<Props> = ({
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
-          // whileHover={{ filter: "grayscale(0)" }}
           className="hidden md:flex flex-col items-center justify-center md:ml-auto grayscale group-hover:grayscale-0 transition-all duration-200 relative"
         >
           <Image alt={title} src={banner} height={520} />

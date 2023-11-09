@@ -1,5 +1,5 @@
 import { SmoothScroll } from "@/components"
-import { Hero, Projects } from "@/sections"
+import { Experience, Hero, Projects } from "@/sections"
 import { Metadata } from "next"
 
 export const metadata: Metadata = {
@@ -12,6 +12,7 @@ export default function Home() {
   return (
     <article className="flex flex-col min-h-screen w-full px-4 max-w-6xl">
       <Hero />
+      <Experience className="my-16 sm:my-20" />
       <Projects className="my-16 sm:my-20" />
       <span className="text-neutral-400">
         &#47;&#47; This is work in progress, please check back often!
