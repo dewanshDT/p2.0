@@ -49,7 +49,7 @@ const ProjectCard: React.FC<Props> = ({
       initial={{ opacity: 0.5, translateY: 200 }}
       whileInView={{ opacity: 1, translateY: 0 }}
       viewport={{ once: true }}
-      className="flex flex-col w-full md:min-h-[60vh]"
+      className="flex flex-col w-full md:min-h-[60vh] group"
     >
       {/* header */}
       <div className="flex gap-4 w-full items-center">
@@ -110,9 +110,15 @@ const ProjectCard: React.FC<Props> = ({
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
-          className="hidden md:flex flex-col items-center justify-center md:ml-auto"
+          // whileHover={{ filter: "grayscale(0)" }}
+          className="hidden md:flex flex-col items-center justify-center md:ml-auto transition-all duration-200 relative"
         >
-          <Image alt={title} src={banner} height={520} />
+          <Image
+            alt={title}
+            src={banner}
+            height={520}
+            className="grayscale group-hover:grayscale-0"
+          />
         </motion.div>
       </div>
       <div className="w-full mt-8 sm:border-b-8 border-dashed border-neutral-200 dark:border-neutral-900 max-w-xl ml-auto"></div>
