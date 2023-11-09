@@ -16,6 +16,7 @@ const projects = [
     tags: ["ui/ux", "react", "express", "webpack", "styled components", "sass"],
     link: "https://editor.p5js.org/",
     gHLink: "https://github.com/processing/p5.js-web-editor",
+    apiUrl: "https://api.github.com/repos/processing/p5.js-web-editor",
     banner: editor,
   },
   {
@@ -52,6 +53,7 @@ const projects = [
     ],
     link: "https://vidhaanweb.vercel.app/",
     gHLink: "https://github.com/Vidhaan-org/vidhaanweb",
+    apiUrl: "https://api.github.com/repos/Vidhaan-org/vidhaanweb",
     banner: vidhaan,
   },
   {
@@ -61,6 +63,7 @@ const projects = [
     tags: ["ui/ux", "javascript", "personalization"],
     link: "https://marketplace.visualstudio.com/items?itemName=DEW.dew-grey",
     gHLink: "https://github.com/dewanshDT/DEW-GREY",
+    apiUrl: "https://api.github.com/repos/dewanshDT/DEW-GREY",
     banner: gray,
   },
 ]
