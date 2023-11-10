@@ -3,7 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "concurrently \"contentlayer dev\" \"next dev\"",
+    "dev": "next dev",
+    "content-dev": "concurrently \"contentlayer dev\" \"next dev\"",
     "build:blogs": "npx contentlayer build",
     "build": "next build",
     "prebuild": "npm run build:blogs",
