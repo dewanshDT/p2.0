@@ -62,6 +62,7 @@ const Experience: React.FC<Props> = (props) => {
         transition={{ delay: 0.2, duration: 0.2 }}
         initial={{ height: 0 }}
         whileInView={{ height: isDivisibleBy5(index + 1) ? 64 : 40 }}
+        viewport={{ once: true }}
         key={index}
         className={clsx(
           "w-6 border-l-2 ",
@@ -133,12 +134,13 @@ const ExpCard = ({
           transition={{ delay: 0.2 }}
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
           className="flex-col"
         >
           <div className="text-red-500 text-sm uppercase">
             {start} - {end}
           </div>
-          <h3 className="text-3xl sm:text-4xl font-light mt-14">{title}</h3>
+          <h3 className="text-2xl sm:text-4xl font-light mt-14">{title}</h3>
           <h5 className="sm:text-xl mt-2 text-neutral-500 dark:text-neutral-400 font-semibold">
             {company}
           </h5>
