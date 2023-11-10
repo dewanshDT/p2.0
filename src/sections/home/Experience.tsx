@@ -139,10 +139,12 @@ const ExpCard = ({
             {start} - {end}
           </div>
           <h3 className="text-3xl sm:text-4xl font-light mt-14">{title}</h3>
-          <h5 className="text-xl mt-2 text-neutral-500 dark:text-neutral-400 font-semibold">
+          <h5 className="sm:text-xl mt-2 text-neutral-500 dark:text-neutral-400 font-semibold">
             {company}
           </h5>
-          <p className="text-base tracking-wide mt-6 max-w-lg">{description}</p>
+          <p className="text-sm sm:text-base tracking-wide mt-6 max-w-lg">
+            {description}
+          </p>
         </motion.div>
       </div>
     </div>
