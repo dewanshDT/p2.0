@@ -64,7 +64,7 @@ const Experience: React.FC<Props> = (props) => {
         whileInView={{ height: isDivisibleBy5(index + 1) ? 64 : 40 }}
         key={index}
         className={clsx(
-          "w-4 sm:w-6 border-l-2 ",
+          "w-6 border-l-2 ",
           {
             "h-16 border-neutral-400 dark:border-neutral-500": isDivisibleBy5(
               index + 1,
