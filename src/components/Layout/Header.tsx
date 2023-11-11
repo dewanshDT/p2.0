@@ -15,7 +15,6 @@ const Header = () => {
         "sticky top-0 z-10",
         "w-full",
         "flex flex-col items-center",
-        "border-b dark:border-neutral-900 border-neutral-200",
       )}
     >
       <div className="max-w-6xl px-4 py-3 w-full flex justify-between items-center">

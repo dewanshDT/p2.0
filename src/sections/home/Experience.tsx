@@ -115,12 +115,15 @@ const Experience: React.FC<Props> = (props) => {
           >
             <div className="h-full flex">{innerDivs(89)}</div>
 
-            {experiences.map((exp) => {
+            {experiences.map((exp, index) => {
               return (
                 <>
                   <ExpCard key={exp.title} {...exp} />
                   <div key={exp.title} className="h-full flex">
-                    {innerDivs(59)}
+                    {innerDivs(
+                      index === experiences.length - 1 ? 69 : 59,
+                      index === 0 ? 90 : 60 * (index + 1) + 30,
+                    )}
                   </div>
                 </>
               )
@@ -177,7 +180,7 @@ const ExpCard = ({
             {tags.map((tag) => (
               <div
                 key={tag}
-                className="dark:bg-neutral-800 bg-neutral-200 text-red-500 uppercase px-[.5em] py-[.1em] text-xs sm:text-sm"
+                className="dark:bg-neutral-900 bg-neutral-200 text-red-500 uppercase px-[.5em] py-[.1em] text-xs sm:text-sm"
               >
                 {tag}
               </div>
@@ -189,7 +192,7 @@ const ExpCard = ({
   )
 }
 
-const innerDivs = (num: number) =>
+const innerDivs = (num: number, start: number = 0) =>
   Array.from({ length: num }, (_, index) => (
     <motion.div
       transition={{ delay: 0.2, duration: 0.2 }}
@@ -213,7 +216,7 @@ const innerDivs = (num: number) =>
     >
       {isDivisibleBy5(index + 1) && (
         <div className="absolute -bottom-1 left-2 opacity-50 text-xs">
-          {(index + 1) / 5}
+          {(index + start + 1) / 5}
         </div>
       )}
     </motion.div>
