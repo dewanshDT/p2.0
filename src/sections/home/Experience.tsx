@@ -111,7 +111,7 @@ const Experience: React.FC<Props> = (props) => {
           ))}
         </motion.h2>
         <div className="flex overflow-hidden w-full relative h-full flex-1 mt-6 sm:mt-20">
-          <div className="experience-overlay absolute top-0 left-0 w-full h-full z-[5]"></div>
+          <div className="experience-overlay pointer-events-none absolute top-0 left-0 w-full h-full z-[5]"></div>
           <motion.div
             className={clsx(
               "min-w-[100vw] border-t-2 border-red-500 absolute top-0",
