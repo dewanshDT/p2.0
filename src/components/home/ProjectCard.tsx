@@ -45,11 +45,11 @@ const ProjectCard: React.FC<Props> = ({
   })
   return (
     <motion.div
-      transition={{ ease: "easeIn" }}
-      initial={{ opacity: 0.5, translateY: 200 }}
+      transition={{ ease: "easeIn", delay: 0.2 }}
+      initial={{ opacity: 0.5, translateY: 100 }}
       whileInView={{ opacity: 1, translateY: 0 }}
       viewport={{ once: true }}
-      className="flex flex-col w-full md:min-h-[60vh] group"
+      className="flex flex-col w-full group"
     >
       {/* header */}
       <div className="flex gap-4 w-full items-center">
@@ -68,54 +68,42 @@ const ProjectCard: React.FC<Props> = ({
         </CursorHighlight>
       </div>
       {/* info */}
-      <div className="flex flex-col-reverse w-full h-full flex-grow md:grid grid-cols-2 gap-8 mt-8">
-        <div className="flex flex-col gap-6 my-2">
-          <p className="dark:text-neutral-300 text-sm sm:text-base">
-            {description}
-          </p>
-          <div className="flex flex-col gap-8 my-auto">
-            <div className="flex gap-2 flex-wrap max-w-sm">
-              {tags.map((tag) => (
-                <div
-                  key={tag}
-                  className="dark:bg-neutral-800 bg-neutral-200 text-red-500 uppercase px-[.5em] py-[.1em] text-xs sm:text-sm"
-                >
-                  {tag}
+      <div className="flex flex-col gap-6 my-8">
+        <p className="dark:text-neutral-300 text-sm sm:text-base">
+          {description}
+        </p>
+        <div className="flex flex-col gap-8 my-auto">
+          <div className="flex gap-2 flex-wrap max-w-sm">
+            {tags.map((tag) => (
+              <div
+                key={tag}
+                className="dark:bg-neutral-900 bg-neutral-200 text-red-500 uppercase px-[.5em] py-[.1em] text-xs sm:text-sm"
+              >
+                {tag}
+              </div>
+            ))}
+          </div>
+          <div className="flex gap-4 text-neutral-400 dark:text-neutral-500">
+            <CursorHighlight className="text-2xl p-1 w-max hover:text-red-500">
+              <Link href={gHLink} target="_blank">
+                <FaGithub />
+              </Link>
+            </CursorHighlight>
+            {apiUrl && (
+              <>
+                <div className="flex items-center gap-2 p-1">
+                  <AiOutlineFork className="text-2xl" />
+                  <span className="text-red-500">{stats.forks}</span>
                 </div>
-              ))}
-            </div>
-            <div className="flex gap-4 text-neutral-400 dark:text-neutral-500">
-              <CursorHighlight className="text-2xl p-1 w-max hover:text-red-500">
-                <Link href={gHLink} target="_blank">
-                  <FaGithub />
-                </Link>
-              </CursorHighlight>
-              {apiUrl && (
-                <>
-                  <div className="flex items-center gap-2 p-1">
-                    <AiOutlineFork className="text-2xl" />
-                    <span className="text-red-500">{stats.forks}</span>
-                  </div>
-                  <div className="flex items-center gap-2  p-1">
-                    <AiOutlineStar className="text-2xl" />
-                    <span className="text-red-500">{stats.stars}</span>
-                  </div>
-                </>
-              )}
-            </div>
+                <div className="flex items-center gap-2  p-1">
+                  <AiOutlineStar className="text-2xl" />
+                  <span className="text-red-500">{stats.stars}</span>
+                </div>
+              </>
+            )}
           </div>
         </div>
-        <motion.div
-          transition={{ delay: 0.2 }}
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          className="hidden md:flex flex-col items-center justify-center md:ml-auto grayscale group-hover:grayscale-0 transition-all duration-200 relative"
-        >
-          <Image alt={title} src={banner} height={520} />
-        </motion.div>
       </div>
-      <div className="w-full mt-8 sm:border-b-8 border-dashed border-neutral-200 dark:border-neutral-900 max-w-xl ml-auto"></div>
     </motion.div>
   )
 }

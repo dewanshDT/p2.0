@@ -14,7 +14,7 @@ export default function Home() {
       <Hero />
       <Experience className="my-16 sm:my-20" />
       <Projects className="" />
-      <span className="text-neutral-400">
+      <span className="text-neutral-400 mt-16">
         &#47;&#47; This is work in progress, please check back often!
       </span>
       <SmoothScroll />

@@ -98,17 +98,17 @@ const Experience: React.FC<Props> = (props) => {
   return (
     <section
       {...props}
-      className={twMerge("experience h-[600vh] sm:h-[670vh]", props.className)}
+      className={twMerge("experience h-[600vh] sm:h-[600vh]", props.className)}
     >
       <div className="sticky top-20 flex flex-col gap-4 w-full min-h-screen">
         <h2 className="text-4xl sm:text-6xl font-bold uppercase">
           Experience.
         </h2>
-        <div className="flex overflow-hidden w-full relative h-full flex-1 mt-6 sm:mt-20">
+        <div className="flex overflow-hidden w-full relative h-full flex-1 mt-6 sm:mt-10">
           <div className="experience-overlay pointer-events-none absolute top-0 left-0 w-full h-full z-[5]"></div>
           <motion.div
             className={clsx(
-              "min-w-[100vw] border-t-2 border-red-500 absolute top-0",
+              "min-w-[100vw] border-t-2 border-r-2 border-l-2 dark:bg-neutral-950 bg-neutral-50 pb-4 border-red-500 absolute top-0",
               "flex",
             )}
             style={{ left: x }}
@@ -121,7 +121,7 @@ const Experience: React.FC<Props> = (props) => {
                   <ExpCard key={exp.title} {...exp} />
                   <div key={exp.title} className="h-full flex">
                     {innerDivs(
-                      index === experiences.length - 1 ? 69 : 59,
+                      index === experiences.length - 1 ? 79 : 59,
                       index === 0 ? 90 : 60 * (index + 1) + 30,
                     )}
                   </div>
@@ -159,24 +159,24 @@ const ExpCard = ({
           transition={{ delay: 0.2 }}
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
+          // viewport={{ once: true }}
           className="flex-col"
         >
           <div className="text-red-500 text-sm uppercase">
             {start} - {end}
           </div>
-          <h3 className="text-2xl sm:text-4xl font-light mt-14">{title}</h3>
+          <h3 className="text-xl sm:text-2xl font-light mt-10">{title}</h3>
           <Link href={link}>
-            <CursorHighlight className="w-max">
+            <CursorHighlight className="w-max max-w-full">
               <h5 className="sm:text-xl mt-2 text-neutral-500 dark:text-neutral-400 font-semibold">
                 {company}
               </h5>
             </CursorHighlight>
           </Link>
-          <p className="text-sm sm:text-base tracking-wide mt-6 max-w-lg">
+          <p className="text-sm sm:text-base tracking-wide mt-3 max-w-lg">
             {description}
           </p>
-          <div className="flex gap-2 flex-wrap max-w-sm mt-6">
+          <div className="flex gap-2 flex-wrap max-w-sm mt-4">
             {tags.map((tag) => (
               <div
                 key={tag}
@@ -198,7 +198,7 @@ const innerDivs = (num: number, start: number = 0) =>
       transition={{ delay: 0.2, duration: 0.2 }}
       initial={{ height: 0 }}
       whileInView={{ height: isDivisibleBy5(index + 1) ? 64 : 40 }}
-      viewport={{ once: true }}
+      // viewport={{ once: true }}
       key={index}
       className={clsx(
         "w-6 border-l-2 relative",
