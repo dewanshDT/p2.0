@@ -101,15 +101,9 @@ const Experience: React.FC<Props> = (props) => {
       className={twMerge("experience h-[600vh] sm:h-[670vh]", props.className)}
     >
       <div className="sticky top-20 flex flex-col gap-4 w-full min-h-screen">
-        <motion.h2
-          className="text-6xl font-bold uppercase flex"
-          initial={{ gap: 20 }}
-          whileInView={{ gap: 1 }}
-        >
-          {"experience".split("").map((letter) => (
-            <span key={letter}>{letter}</span>
-          ))}
-        </motion.h2>
+        <h2 className="text-4xl sm:text-6xl font-bold uppercase">
+          Experience.
+        </h2>
         <div className="flex overflow-hidden w-full relative h-full flex-1 mt-6 sm:mt-20">
           <div className="experience-overlay pointer-events-none absolute top-0 left-0 w-full h-full z-[5]"></div>
           <motion.div
