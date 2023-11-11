@@ -2,7 +2,6 @@ import { ProjectCard } from "@/components"
 import React from "react"
 import { twMerge } from "tailwind-merge"
 import editor from "../../../public/images/Editor.png"
-import trs from "../../../public/images/trs.png"
 import vidhaan from "../../../public/images/vidhaan.png"
 import gray from "../../../public/images/gray.png"
 
@@ -26,25 +25,6 @@ const projects = [
     gHLink: "https://github.com/processing/p5.js-web-editor",
     apiUrl: "https://api.github.com/repos/processing/p5.js-web-editor",
     banner: editor,
-  },
-  {
-    title: "The Research School",
-    description:
-      "A complete AI powered platform for research scholars and Professors which includes features like AI Question bank, Live Webinars with transcripts and note taking  and many more.",
-    tags: [
-      "ui/ux",
-      "next.js",
-      "django",
-      "postgresql",
-      "aws",
-      "stripe",
-      "tailwind",
-      "typescript",
-      "open ai api",
-    ],
-    link: "https://theresearchschool.com",
-    gHLink: "https://github.com/Research-School",
-    banner: trs,
   },
   {
     title: "Vidhaan",
@@ -81,7 +61,7 @@ const Projects: React.FC<Props> = (props) => {
     <section
       {...props}
       className={twMerge(
-        "projects flex flex-col gap-4 w-full min-h-screen ",
+        "projects flex flex-col gap-4 w-full min-h-screen",
         props.className,
       )}
     >

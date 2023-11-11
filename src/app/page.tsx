@@ -13,7 +13,7 @@ export default function Home() {
     <article className="flex flex-col min-h-screen w-full px-4 max-w-6xl">
       <Hero />
       <Experience className="my-16 sm:my-20" />
-      <Projects className="my-16 sm:my-20" />
+      <Projects className="" />
       <span className="text-neutral-400">
         &#47;&#47; This is work in progress, please check back often!
       </span>
