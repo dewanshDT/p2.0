@@ -65,7 +65,7 @@ const Experience: React.FC<Props> = (props) => {
         viewport={{ once: true }}
         key={index}
         className={clsx(
-          "w-6 border-l-2 ",
+          "w-6 border-l-2 relative",
           {
             "h-16 border-neutral-400 dark:border-neutral-500": isDivisibleBy5(
               index + 1,
@@ -77,7 +77,13 @@ const Experience: React.FC<Props> = (props) => {
             ),
           },
         )}
-      ></motion.div>
+      >
+        {isDivisibleBy5(index + 1) && (
+          <div className="absolute -bottom-1 left-2 opacity-50 text-xs">
+            {(index + 1) / 5}
+          </div>
+        )}
+      </motion.div>
     ))
 
   return (
@@ -90,7 +96,7 @@ const Experience: React.FC<Props> = (props) => {
         <div className="flex overflow-hidden w-full relative h-full flex-1 mt-6 sm:mt-20">
           <motion.div
             className={clsx(
-              "min-w-[100vw] border-t border-red-500 absolute top-0",
+              "min-w-[100vw] border-t-2 border-red-500 absolute top-0",
               "flex",
             )}
             style={{ left: x }}
