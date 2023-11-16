@@ -37,6 +37,7 @@ const StaggerText: React.FC<Props> = ({
             duration: 0.005 / speed,
             delay: delay,
           }}
+          viewport={{ once: true }}
         >
           {children.split(" ").map((word, wordIndex) => (
             <span key={`${word}${wordIndex}`}>
@@ -65,6 +66,7 @@ const StaggerText: React.FC<Props> = ({
           duration: 0.005 / speed,
           delay: delay,
         }}
+        viewport={{ once: true }}
       >
         {children.split(" ").map((word, wordIndex) => (
           <motion.span
