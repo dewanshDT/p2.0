@@ -10,5 +10,6 @@ export { default as Button } from "./core/Button"
 export { default as CursorHighlight } from "./core/CursorHighlight"
 export { default as ShuffleText } from "./core/ShuffleText"
 export { default as ProgressBar } from "./core/ProgressBar"
+export { default as StaggerText } from "./core/StaggerText"
 
 export { default as Cursor } from "./Cursor"

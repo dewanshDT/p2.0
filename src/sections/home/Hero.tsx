@@ -1,7 +1,7 @@
 import Link from "next/link"
 import React from "react"
 import { twMerge } from "tailwind-merge"
-import { Button, CursorHighlight } from "../../components"
+import { Button, CursorHighlight, StaggerText } from "../../components"
 
 interface Props extends React.HtmlHTMLAttributes<HTMLDivElement> {}
 
@@ -21,12 +21,14 @@ const Hero: React.FC<Props> = (props) => {
         Dewansh Thakur
       </h1>
       <p className="text-lg tracking-widest uppercase dark:text-neutral-300 max-w-5xl">
-        I&apos;m a Web Developer & open source contributor with a passion for
-        creating innovative products. With over 4 years of experience, I&apos;ve
-        contributed to projects like Processing Foundation. My expertise extends
-        beyond UI design and Full Stack development, as I&apos;m also learning
-        DevOps, and system design, ensuring robust and well-rounded solutions
-        for the market.
+        <StaggerText speed={3}>
+          I&apos;m a Web Developer & open source contributor with a passion for
+          creating innovative products. With over 4 years of experience,
+          I&apos;ve contributed to projects like Processing Foundation. My
+          expertise extends beyond UI design and Full Stack development, as
+          I&apos;m also learning DevOps, and system design, ensuring robust and
+          well-rounded solutions for the market.
+        </StaggerText>
       </p>
       <CursorHighlight className="w-max">
         <Link className="font-medium" href="/about">
