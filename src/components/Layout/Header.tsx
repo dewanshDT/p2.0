@@ -5,9 +5,15 @@ import Link from "next/link"
 import { FaMoon, FaSun } from "react-icons/fa"
 import CursorHighlight from "../core/CursorHighlight"
 import clsx from "clsx"
+import { motion, useScroll } from "framer-motion"
+import { usePathname } from "next/navigation"
+import { BLOG_URL_REGEX } from "@/lib/constants"
 
 const Header = () => {
   const { toggleTheme, theme } = useTheme()
+  const { scrollYProgress } = useScroll()
+  const path = usePathname()
+
   return (
     <header
       className={clsx(
@@ -43,6 +49,14 @@ const Header = () => {
           </CursorHighlight>
         </div>
       </div>
+      {BLOG_URL_REGEX.test(path) && (
+        <div className="relative w-full">
+          <motion.div
+            style={{ scaleX: scrollYProgress }}
+            className="absolute left-0 w-full border-b-2 border-red-500 origin-left"
+          ></motion.div>
+        </div>
+      )}
     </header>
   )
 }
