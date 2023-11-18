@@ -51,6 +51,7 @@ const Header = () => {
       </div>
       {BLOG_URL_REGEX.test(path) && (
         <div className="relative w-full">
+          <div className="absolute left-0 w-full border-b-2 border-neutral-100 dark:border-neutral-900"></div>
           <motion.div
             style={{ scaleX: scrollYProgress }}
             className="absolute left-0 w-full border-b-2 border-red-500 origin-left"
