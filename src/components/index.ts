@@ -4,6 +4,7 @@ export { default as Mdx } from "./blog/Mdx"
 
 export { default as Loader } from "./home/Loader"
 export { default as ProjectCard } from "./home/ProjectCard"
+export { default as GradientCanvas } from "./home/GradientCanvas"
 
 export { default as SmoothScroll } from "./core/SmoothScroll"
 export { default as Button } from "./core/Button"
