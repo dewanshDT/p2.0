@@ -94,10 +94,17 @@ iframe {
 }
 
 .gradient-canvas {
-  --gradient-color-1: #ef4444;
-  --gradient-color-2: #000000;
-  --gradient-color-3: #000000;
-  --gradient-color-4: #000000;
+  --gradient-color-1: #000000;
+  --gradient-color-2: #ef4444;
+  --gradient-color-3: #535353;
+  --gradient-color-4: #585858;
+}
+
+.dark .gradient-canvas {
+  --gradient-color-1: #ffffff;
+  --gradient-color-2: #ef4444;
+  --gradient-color-3: #303030;
+  --gradient-color-4: #1d1d1d;
 }
 
 @keyframes fadeIn {
