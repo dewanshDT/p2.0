@@ -45,7 +45,7 @@ const about = () => {
             <div className="mt-6 flex gap-2">
               <CursorHighlight>
                 <Link
-                  href="mailto:dewansh.dt@gmail.com"
+                  href="mailto:me@dewansh.space"
                   target="_blank"
                   aria-label="click to email Dewansh"
                 >
